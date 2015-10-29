@@ -1,15 +1,13 @@
 import hashlib
 
-class hashList:
+class HashList:
 	
 	def __init__(self):
 		self.hash_list = []
 
-	def isDuplicate(self,file_path):
-		hash = hashlib.md5()
-		with open(file_path,"rb") as f:
-			for block in iter(lambda: f.read(4096), b""):
-				hash.update(block)
+	def isDuplicate(self,file_text):
+		hash = hashlib.md5()		
+		hash.update(file_text)
 		if hash.hexdigest() in self.hash_list:
 			return True
 		else:

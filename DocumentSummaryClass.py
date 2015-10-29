@@ -1,15 +1,17 @@
-import HashListClass
+from HashListClass import *
 from RulesReaderClass import *
 import urllib2
 import urllib
 import base64
 import json
 import time
-import os
+import subprocess
+import re
 
 class DocumentSummary:
 
 	def __init__(self,classification,host):
+		self.fileHash = HashList()
 		self.docFreqs = {}
 		self.nodeList = classification.split('/')
 		self.nodeList = list(reversed(self.nodeList))  
@@ -58,14 +60,28 @@ class DocumentSummary:
 
 	
 	def getDocumentText(self,url_list):
+		docs = []
 		for u in url_list:
-			doc_html = os.system("lynx --dump " + u)
-			print(doc_html)			
+			doc_dump = subprocess.check_output("lynx --dump " + u, shell=True)			
+			index = doc_dump.find("\nReferences\n")
+			doc_dump = doc_dump[:index].lower()
+			doc_dump = re.sub(r'\[.*?\]',r'',doc_dump)
 
+			final_text = ''			
+			for i in range(0,len(doc_dump)):
+				char = doc_dump[i]
+				if(char.isalpha() and ord(char) < 128):
+					final_text += char.lower()
+				else:
+					final_text += ' '
+	
+			if(not self.fileHash.isDuplicate(final_text)):		
+				final_text = final_text.split()
+				docs.append(final_text)
 
-
-
-
+		
+		print(docs)		
+		return docs
 
 
 
@@ -74,5 +90,5 @@ class DocumentSummary:
 c = DocumentSummary("root","diabetes.org")
 #c.generateSummaries()
 c.search("google")
-c.getDocumentText("http://google.com")
+c.getDocumentText(["www.google.com","www.google.com"])
 
