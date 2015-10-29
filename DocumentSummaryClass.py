@@ -37,10 +37,23 @@ class DocumentSummary:
 
 	def generateSummaries(self):
 		for n in self.nodeList:
-			path = "./rules/" + n + ".txt"
+			path = "./rules/" + n.lower() + ".txt"
 			queries = RulesReader(path).getRules()
 			for q in queries:
-				res = search(q[1])
+				res = self.search(q[1])
+				docs = self.getDocumentText(res)
+				
+				for d in docs:
+					for w in d:
+						if(d in self.docFreqs.keys()):
+							self.docsFreqs[w] += 1
+						else:
+							self.docFreqs[w] = 1
+			
+			f = open(n + "-" + self.host + ".txt", 'w')
+			f.write(str(self.docFreqs))
+
+								 
 				
 		
 
@@ -76,19 +89,16 @@ class DocumentSummary:
 					final_text += ' '
 	
 			if(not self.fileHash.isDuplicate(final_text)):		
-				final_text = final_text.split()
-				docs.append(final_text)
-
-		
-		print(docs)		
+				final_text = set(final_text.split())
+				docs.append(list(final_text))
+				
 		return docs
+
 
 
 
 
 ## TEST
 c = DocumentSummary("root","diabetes.org")
-#c.generateSummaries()
-c.search("google")
-c.getDocumentText(["www.google.com","www.google.com"])
+c.generateSummaries()
 
