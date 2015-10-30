@@ -15,7 +15,7 @@ class RulesReader:
 			sub = inFile[i].split(None, 1)
 			if len(sub) == 2:
 				self.rules.append((sub[0], sub[1]))
-		print 'Classification rules '+filePath+ ' in use'
+		#print 'Classification rules '+filePath+ ' in use'
 
 
 	def getRules(self):

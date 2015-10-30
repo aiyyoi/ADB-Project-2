@@ -5,12 +5,9 @@
 	Delegate to suitable classes for analysis
 '''
 
-import urllib2
-import urllib
-import base64
-import json
 import argparse
 import QProberClass
+import DocumentSummaryClass
 
 
 #################### New Search and Classification Session #################################
@@ -29,7 +26,14 @@ tCoverage = args.cov
 
 #instantiate QProber
 qProber = QProberClass.QProber(tSpecificity, tCoverage, site, 'key.json')
+print '\n\nClassifying...'
 category = qProber.classify('rules/root.txt', 'Root')
-print category
+print '\n\nClassification Result: \n' + category
+
+
+# to summarize database
+## TEST
+c = DocumentSummaryClass.DocumentSummary(category,site)
+c.generateSummaries()
 
 

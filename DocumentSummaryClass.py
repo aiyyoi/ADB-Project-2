@@ -96,9 +96,3 @@ class DocumentSummary:
 
 
 
-
-
-## TEST
-c = DocumentSummary("root","diabetes.org")
-c.generateSummaries()
-

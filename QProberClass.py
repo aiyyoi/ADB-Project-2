@@ -36,21 +36,18 @@ class QProber:
 			# Search and get counts for matched docs
 			if eachRule[0] in categoryCts:
 				categoryCts[eachRule[0]] += self.search()
-				print 'Category: '+eachRule[0]+ ' | Current Doc Counts: '+str(categoryCts[eachRule[0]])
 			else:
 				categoryCts[eachRule[0]] = self.search()
-				print 'Category: '+eachRule[0]+ ' | Current Doc Counts: '+str(categoryCts[eachRule[0]])
 		#check against with predefined spec and cov
 		tDocCts = 0 # total number of document counts
 		for eachCat in categoryCts.keys():
 			tDocCts += categoryCts[eachCat]
 
-		print 'Comparing with provided parameters '+ self.tSpec+ ' '+self.tCov
 		# need to sort the counts results, or do it in better logic
 		for eachCat in categoryCts.keys():
 			cCov = categoryCts[eachCat]
 			cSpec = float(categoryCts[eachCat])/tDocCts
-			print eachCat+' '+str(cCov)+' '+ str(cSpec)
+			print 'Database has Coverage '+str(cCov)+' with Specificity '+ str(cSpec)+ ' in Category '+eachCat
 			if (cSpec >= float(self.tSpec) and cCov >= int(self.tCov)):
 				supCat = supCat+'/'+eachCat
 				if (eachCat == 'Health' or eachCat == 'Computers' or eachCat == 'Sports'):
