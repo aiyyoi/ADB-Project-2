@@ -43,15 +43,27 @@ class QProber:
 		for eachCat in categoryCts.keys():
 			tDocCts += categoryCts[eachCat]
 
-		# need to sort the counts results, or do it in better logic
 		for eachCat in categoryCts.keys():
 			cCov = categoryCts[eachCat]
 			cSpec = float(categoryCts[eachCat])/tDocCts
 			print 'Database has Coverage '+str(cCov)+' with Specificity '+ str(cSpec)+ ' in Category '+eachCat
 			if (cSpec >= float(self.tSpec) and cCov >= int(self.tCov)):
-				supCat = supCat+'/'+eachCat
-				if (eachCat == 'Health' or eachCat == 'Computers' or eachCat == 'Sports'):
+				if (eachCat != 'Health' and eachCat!='Computers' and eachCat!='Sports'):
+					parent = rulePath[6:-4].capitalize() # extract the parent category from rule file path
+					for i in range(0, len(supCat)):
+						if parent in supCat[i]:
+							if len(supCat[i].split('/')) == 2:
+								supCat[i] = supCat[i]+'/'+eachCat
+							else:
+								supCat.append('Root/'+parent+'/'+eachCat)
+
+				else:
+					if len(supCat[0].split('/')) == 1:
+						supCat[0] = supCat[0]+'/'+eachCat
+					else:
+						supCat.append('Root/'+eachCat)
 					supCat = self.classify('rules/'+eachCat.lower()+'.txt', supCat)
+					
 		return supCat	
 
 			

@@ -27,8 +27,10 @@ tCoverage = args.cov
 #instantiate QProber
 qProber = QProberClass.QProber(tSpecificity, tCoverage, site, 'key.json')
 print '\n\nClassifying...'
-category = qProber.classify('rules/root.txt', 'Root')
-print '\n\nClassification Result: \n' + category
+category = qProber.classify('rules/root.txt', ['Root'])
+print '\n\nClassification Result: \n'
+for each in category:
+	print each
 
 
 # to summarize database
