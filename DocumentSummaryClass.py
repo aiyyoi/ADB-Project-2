@@ -11,10 +11,10 @@ import re
 class DocumentSummary:
 
 	def __init__(self,classification,host):
+		self.urlList = []
 		self.fileHash = HashList()
-		self.docFreqs = {}
-		self.nodeList = classification.split('/')
-		self.nodeList = list(reversed(self.nodeList))  
+		self.docFreqDict = {}
+		self.classification = map(lambda x : x.split("/"),classification)
 		self.host = host
                 self.bingUrlBase = 'https://api.datamarket.azure.com/Bing/SearchWeb/v1/Composite?'
                 self.bingParams = {'$top': '4', '$format': 'json'}
@@ -28,15 +28,8 @@ class DocumentSummary:
 
 
 
-
-
-
-
-
-
-
 	def generateSummaries(self):
-		for c in classification:
+		for c in self.classification:
 			i = 0        
                         for n in c:
 				if(n in self.docFreqDict.keys()):
@@ -49,29 +42,33 @@ class DocumentSummary:
 					path = "./rules/" + n.lower() + ".txt"
 					queries = RulesReader(path).getRules()
 
+				docFreqs = {}
 				for q in queries:
 					res = self.search(q[1])
-					docs = self.getDocumentText(res)  
-                                        docFreqs = {}
+					docs = self.getDocumentText(res)   
                                         for d in docs:
                                                 for w in d:
-                                                        if(w in docFreqs.keys()):
-                                                                docsFreqs[w] += 1
+							temp = docFreqs.keys()
+                                                        if(w in temp):
+                                                                docFreqs[w] += 1
                                                         else:
                                                                 docFreqs[w] = 1
 							p = 0
 							while p < i:
 								if(w in self.docFreqDict[c[p]].keys()):
-									self.docFreqDict[c[p]][w] += 1
+									self.docFreqDict[c[p]][w] += docFreqs[w]
 								else:
-									self.docFreqDict[c[p]][w] = 1 
-                                        self.docFreqDict[n] = docFreqs
+									self.docFreqDict[c[p]][w] = docFreqs[w]
+								p += 1
+
+                                self.docFreqDict[n] = docFreqs
                 		i += 1
 
 		for k in self.docFreqDict.keys():
-				f = open(k + "-" + self.host, 'w')
-				for w in self.docFreqDict[k]:
-					f.write(w + "#" + self.docFreqDict[k][w])
+				f = open(k.capitalize() + "-" + self.host, 'w')
+				for w in sorted(self.docFreqDict[k]):
+					f.write(w + "#" + str(self.docFreqDict[k][w]) + "\n")
+				f.close()
 
 
 
@@ -91,6 +88,10 @@ class DocumentSummary:
 	def getDocumentText(self,url_list):
 		docs = []
 		for u in url_list:
+			if(u in self.urlList):
+				continue
+			else:
+				self.urlList.append(u)
 			try:
 				doc_dump = subprocess.check_output("lynx --dump " + u, shell=True)		
 			except Exception, e:
@@ -107,11 +108,16 @@ class DocumentSummary:
 				else:
 					final_text += ' '
 	
-			if(not self.fileHash.isDuplicate(final_text)):		
-				final_text = set(final_text.split())
-				docs.append(list(final_text))
-				
+			#if(not self.fileHash.isDuplicate(final_text)):		
+			final_text = set(final_text.split())
+			docs.append(final_text)
+		
 		return docs
 
 
+
+c = DocumentSummary(["Root"],"diabetes.org")
+#d = c.getDocumentText(c.search("pancreas"))
+#print(len(d))
+c.generateSummaries()
 
