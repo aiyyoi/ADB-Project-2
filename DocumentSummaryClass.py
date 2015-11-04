@@ -91,7 +91,10 @@ class DocumentSummary:
 	def getDocumentText(self,url_list):
 		docs = []
 		for u in url_list:
-			doc_dump = subprocess.check_output("lynx --dump " + u, shell=True)			
+			try:
+				doc_dump = subprocess.check_output("lynx --dump " + u, shell=True)		
+			except Exception, e:
+				pass	
 			index = doc_dump.find("\nReferences\n")
 			doc_dump = doc_dump[:index].lower()
 			doc_dump = re.sub(r'\[.*?\]',r'',doc_dump)
