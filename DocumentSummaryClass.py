@@ -36,26 +36,42 @@ class DocumentSummary:
 
 
 	def generateSummaries(self):
-		for n in self.nodeList:
-			path = "./rules/" + n.lower() + ".txt"
-			queries = RulesReader(path).getRules()
-			for q in queries:
-				res = self.search(q[1])
-				docs = self.getDocumentText(res)
-				
-				for d in docs:
-					for w in d:
-						if(d in self.docFreqs.keys()):
-							self.docsFreqs[w] += 1
-						else:
-							self.docFreqs[w] = 1
-			
-			f = open(n + "-" + self.host + ".txt", 'w')
-			f.write(str(self.docFreqs))
+		for c in classification:
+			i = 0        
+                        for n in c:
+				if(n in self.docFreqDict.keys()):
+					continue
+				if( i > 2):
+					path = "./rules/" + c[i-1].lower() + ".txt"
+					queries = RulesReader(path).getRules()
+					queries = filter(lambda x : x[0] == n.lower(),queries)
+				else:
+					path = "./rules/" + n.lower() + ".txt"
+					queries = RulesReader(path).getRules()
 
-								 
-				
-		
+				for q in queries:
+					res = self.search(q[1])
+					docs = self.getDocumentText(res)  
+                                        docFreqs = {}
+                                        for d in docs:
+                                                for w in d:
+                                                        if(w in docFreqs.keys()):
+                                                                docsFreqs[w] += 1
+                                                        else:
+                                                                docFreqs[w] = 1
+							p = 0
+							while p < i:
+								if(w in self.docFreqDict[c[p]].keys()):
+									self.docFreqDict[c[p]][w] += 1
+								else:
+									self.docFreqDict[c[p]][w] = 1 
+                                        self.docFreqDict[n] = docFreqs
+                		i += 1
+
+		for k in self.docFreqDict.keys():
+				f = open(k + "-" + self.host, 'w')
+				for w in self.docFreqDict[k]:
+					f.write(w + "#" + self.docFreqDict[k][w])
 
 
 
