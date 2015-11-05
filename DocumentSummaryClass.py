@@ -116,8 +116,8 @@ class DocumentSummary:
 
 
 
-c = DocumentSummary(["Root"],"diabetes.org")
-#d = c.getDocumentText(c.search("pancreas"))
-#print(len(d))
-c.generateSummaries()
+# c = DocumentSummary(["Root"],"diabetes.org")
+# #d = c.getDocumentText(c.search("pancreas"))
+# #print(len(d))
+# c.generateSummaries()
 

@@ -27,15 +27,18 @@ tCoverage = args.cov
 #instantiate QProber
 qProber = QProberClass.QProber(tSpecificity, tCoverage, site, 'key.json')
 print '\n\nClassifying...'
-category = qProber.classify('rules/root.txt', ['Root'])
+category, urlSet = qProber.classify('rules/root.txt', ['Root'], {'Root':[]})
 print '\n\nClassification Result: \n'
 for each in category:
 	print each
 
+for each in urlSet.keys():
+	print '\n' + each + ': '+str(len(urlSet[each]))
+
 
 # to summarize database
 ## TEST
-c = DocumentSummaryClass.DocumentSummary(category,site)
-c.generateSummaries()
+# c = DocumentSummaryClass.DocumentSummary(category,site)
+# c.generateSummaries()
 
 
