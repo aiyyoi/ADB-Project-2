@@ -1,0 +1,495 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head profile="http://www.w3.org/2005/10/profile">
+	    <title>Java Chiller, mocha/caramel, small (Sonic Drive-In) - MyFoodAdvisor&trade;</title>
+	    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	    <meta name="google-site-verification" content="hrjqf-8rXSNynxTAx-DPtv0ljrcaVIi02Vee-U4nWhw" />
+        <script type="text/javascript" charset="utf-8" src="http://tracker.diabetes.org/myfoodadvisor/media/js/jquery.js"></script>
+        <script type="text/javascript" src="http://tracker.diabetes.org/myfoodadvisor/media/js/jquery.simplemodal.js"></script>
+        <script type="text/javascript" src="http://tracker.diabetes.org/myfoodadvisor/media/js/jquery.qtip.js"></script>
+        <script type="text/javascript" src="http://tracker.diabetes.org/myfoodadvisor/media/js/effects.core.js"></script>
+        <link rel="stylesheet" href="http://tracker.diabetes.org/myfoodadvisor/media/css/screen.css" />
+        <!--[if lte IE 6]>
+        <link rel="stylesheet" href="http://tracker.diabetes.org/myfoodadvisor/media/css/ie6.css" />
+        <![endif]-->
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+            $('a.modal,input.modal').click(function(event){
+                var selector = $(this).attr('href');
+                $(selector).modal({persist: true});
+                event.preventDefault();
+            });
+        });
+        
+        function enterSubmit(event, funct){
+            var characterCode = event.keyCode
+            if(characterCode == 13){
+                funct();
+            }
+        }
+
+            $(document).ready(function() {
+                $('.graphs .charts .chart_set .column').qtip({
+                    show: 'mouseover',
+                    hide: 'mouseout',
+                    style: {
+                        tip: {
+                            corner: 'leftMiddle',
+                            size: {
+                                x: 4,
+                                y:8
+                            }
+                        },
+                        border: {
+                            width: 1,
+                            radius: 2
+                        }
+                    },
+                    position: {
+                        corner: {
+                            target: 'rightMiddle',
+                            tooltip: 'leftMiddle'
+                        }
+                    }
+                });
+                
+                
+                $('.results_data tr td:not(.day, .link)').qtip({
+                    show: 'mouseover',
+                    hide: 'mouseout',
+                    style: {
+                        tip: 'leftMiddle',
+                        border: {
+                            width: 1,
+                            radius: 2
+                        }
+                    },
+                    position: {
+                        corner: {
+                            target: 'rightMiddle',
+                            tooltip: 'leftMiddle'
+                        }
+                    }
+                });
+
+              $('#content ul.bullet li').hover(function() {
+                    $('> a', this).stop().animate({backgroundPosition: '10px'}, {duration:200});
+                },function(){
+                    $('> a', this).stop().animate({backgroundPosition: '6px'}, {duration:200});
+                });
+
+                $('li.hover').hover(function() {
+                    $(this).stop().animate({backgroundColor: '#beedfb'}, {duration: 1});
+                    }, function(){
+                    if($(this).hasClass('selected')){
+                        return;
+                    }else if($(this).hasClass('even')){
+                        $(this).stop().animate({backgroundColor: '#eef5fa'}, {duration: 800});
+                    }else{   
+                        $(this).stop().animate({backgroundColor: '#ffffff'},{duration: 800});
+                    }
+                });
+
+                //Default Searchbox to mimic live site
+                var searchText = $('#id_text_input').val()
+                
+                $('#id_text_input').focus(function(){
+                        if($(this).val() == "Enter Food...")
+                        $(this).val("")
+                });
+                
+                $('.search-form').parent().submit(function() {
+                    if($('#id_text_input').val() == "Enter Food..."){
+                        $('#id_text_input').val("");
+                    }
+                });
+                
+                $(window).load(function(){
+                    if(searchText == "")
+                    $('#id_text_input').val("Enter Food...")
+                });
+                }
+            );
+            
+        </script>
+        
+
+	</head>
+	<body class="food">
+	<div id="wrap">
+	    <div id="header">
+            <a href="/" class="mfa-logo"><img src='http://tracker.diabetes.org/myfoodadvisor/media/images/mfa-logo.png' alt='MyFoodAdvisor' /></a>
+	        <a href="http://www.diabetes.org/" target="_blank" class="ada-logo"><img src="http://tracker.diabetes.org/myfoodadvisor/media/images/ada-logo.png" alt="American Diabetes Association&reg;" title="American Diabetes Association&reg;" /></a>
+	        <ul class="utility-nav">
+	    
+        
+	    
+            <li><a href="#login-modal" class="modal">Login</a></li>
+        
+	    
+                
+                    
+                        
+                    
+                
+                    
+                        <li class="last"><a href="/es/explore/2782/">en Español</a></li>
+                    
+                
+                
+            </ul>
+            
+            <ul class="main-nav">
+                <li class="selected"><a href="/explore/"><span class="left">&nbsp;</span><span class="right">Explore Foods</span></a></li>
+                <li class=""><a href="/recipe/"><span class="left">&nbsp;</span><span class="right">Recipes</span></a></li>
+                <li class=""><a href="#login-modal" class="modal"><span class="left">&nbsp;</span><span class="right">Create a Dish</span></a></li>
+                <li class=""><a href="/my_mfa/"><span class="left">&nbsp;</span><span class="right">Your Food Advisor</span></a></li>
+                <li class=""><a href="/help/"><span class="left">&nbsp;</span><span class="right">Help</span></a></li>
+	        </ul>
+	        <div class="clear"></div>
+	    </div>
+	    <div id="main">
+	    <img src="http://tracker.diabetes.org/myfoodadvisor/media/images/content-head.gif" alt="" id="content-head" />
+	    <div id="content">
+        
+        
+            <div id="login-modal" class="modalWindow">
+                <div class="modalTop"> </div>
+                <div class="modalInner">
+                    <div class="registerArea">
+                        <h3>Register for Account</h3>
+                        <p>To access some areas of the site you need to register for an account.</p>
+                        <a href="https://donations.diabetes.org/site/ConsProfileUser?NEXTURL=http://mfa-qa.diabetes.org" class="button"><span>Register Now</span></a>
+                    </div>
+                    <h3>Or Login</h3>
+                    <div class="loginform" onkeydown="javascript:enterSubmit(event, function(){document.login_form.submit()})">
+                        <form action="/login/" method="post" name="login_form" id="login_form">
+                            <label for="id_username">Username</label>
+                            <input type="text" name="username" id="id_username" />
+                            <label for="id_password">Password</label>
+                            <input type="password" name="password" id="id_password" />
+                            <input type="hidden" name="next" value="explore/" />
+                        </form>
+                        <div class="login-options">
+                            <a href="http://main.diabetes.org/site/UserLogin">Forgot Password?</a>
+                        </div>
+                        <div class="login-button-group">
+                            <a href="#" class="button" onclick="document.login_form.submit()"><span>Login</span></a>
+                            <a href="#" class="button simplemodal-close"><span>Cancel</span></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modalBottom"> </div>
+            </div>
+        
+        
+        
+ 
+<div class="head"><h2>Food Display</h2><img src="http://tracker.diabetes.org/myfoodadvisor/media/images/food-main.png" width="238" height="76" alt="Oranges" class="main" /></div>
+    <div class="clear"></div>
+    
+    <div id="innerwrap">
+        <div class="food-title">
+            <h1>Java Chiller, mocha/caramel, small (Sonic Drive-In)</h1>
+            <div class="button-group">
+                <a href="#login-modal"  class="button modal"><span>Add To Dish</span></a>
+            </div>
+            <div class="clear"> </div>
+        </div>
+        
+        <div class="boxwrap quick_view">
+            <img src="http://tracker.diabetes.org/myfoodadvisor/media/images/box-top.png" width="289" height="4" alt="" />
+            <div class="box">
+                <h3>Quick View</h3>
+                <div class="serving">(Serving: 1 serving)</div>
+                <div class="row">
+                    <span class="key">Calories</span>
+                    <span class="val">850</span>
+                </div>
+                <div class="row">
+                    <span class="key">Saturated Fat</span>
+                    <span class="val">28.0g</span>
+                </div>
+                <div class="row">
+                    <span class="key">Carbohydrate</span>
+                    <span class="val">116g</span>
+                </div>
+                <div class="row">
+                    <span class="key">Sodium</span>
+                    <span class="val">500mg</span>
+                </div>
+                <div class="row">
+                    <span class="key">Fiber</span>
+                    <span class="val">0g</span>
+                </div>
+                <div class="icons">
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                        <span class="nowrap"><span class='sprite carb'>&nbsp;</span>
+                        7 1/2 Other Carbohydrate</span>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                        <span class="nowrap"><span class='sprite fat'>&nbsp;</span>
+                        7  Fat</span>
+                        
+                    
+                    
+                </div>
+            </div>
+            
+            <img src="http://tracker.diabetes.org/myfoodadvisor/media/images/box-bot.png" width="289" height="3" alt="" />
+        </div>
+        
+        <div class="boxwrap details">
+            <img src="http://tracker.diabetes.org/myfoodadvisor/media/images/box-top.png" width="289" height="4" alt="" />
+            <div class="box">
+                <h3>Details</h3>
+                <table cellspacing="0" cellpadding="0" border="0">
+                    <thead>
+                        <tr><th>&nbsp;</th><th>Daily Value</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="odd">
+                            <td><strong>Calories:</strong> 850</td>
+                            <td class="col2">&nbsp;</td>
+                        </tr>
+                        <tr class="even">
+                            <td class="tab">Calories from Fat: 342</td>
+                            <td class="col2">&nbsp;</td>
+                        </tr>
+                        <tr class="odd">
+                            <td><strong>Total Fat:</strong> 38.0g</td>
+                            <td class="col2">58%</td>
+                        </tr>
+                        <tr class="even">
+                            <td class="tab">Saturated Fat: 28.0g</td>
+                            <td class="col2">140%</td>
+                        </tr>
+                        <tr class="odd">
+                            <td class="tab">Trans Fat: 0.0g</td>
+                            <td class="col2">&nbsp;</td>
+                        </tr>
+                        <tr class="even">
+                            <td class="tab">Poly Fat: n/a</td>
+                            <td class="col2">&nbsp;</td>
+                        </tr>
+                        <tr class="odd">
+                            <td class="tab">Mono Fat: n/a</td>
+                            <td class="col2">&nbsp;</td>
+                        </tr>
+                        <tr class="even">
+                            <td><strong>Cholesterol:</strong> 130mg</td>
+                            <td class="col2">43%</td>
+                        </tr>
+                        <tr class="odd">
+                            <td><strong>Sodium:</strong> 500mg</td>
+                            <td class="col2">21%</td>
+                        </tr>
+                        <tr class="even">
+                            <td><strong>Total Carbohydrate:</strong> 116g</td>
+                            <td class="col2">39%</td>
+                        </tr>
+                        <tr class="odd">
+                            <td class="tab">Dietary Fiber: 0g</td>
+                            <td class="col2">0%</td>
+                        </tr>
+                        <tr class="even">
+                            <td class="tab">Sugars: 80g</td>
+                            <td class="col2">&nbsp;</td>
+                        </tr>
+                        <tr class="odd">
+                            <td class="tab">Sugar Alcohol: n/a</td>
+                            <td class="col2">&nbsp;</td>
+                        </tr>
+                        <tr class="even">
+                            <td><strong>Protein:</strong> 10g</td>
+                            <td class="col2">&nbsp;</td>
+                        </tr>
+                        
+                        
+                    </tbody>
+                </table>
+            </div>
+            <img src="http://tracker.diabetes.org/myfoodadvisor/media/images/box-bot.png" width="289" height="3" alt="" />
+        </div>
+        
+        <div class="boxwrap vitamins">
+            <img src="http://tracker.diabetes.org/myfoodadvisor/media/images/box-top.png" width="289" height="4" alt="" />
+            <div class="box">
+                <h3>Vitamins</h3>
+                <table class="vitamin-table" cellspacing="0" cellpadding="0" border="0">
+                    <thead>
+                        <tr><th>&nbsp;</th><th>Daily Value</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="odd"><td>Vitamin A</td><td>25%</td></tr>
+                        <tr class="even"><td>Vitamin C</td><td>0%</td></tr>
+                        <tr class="odd"><td>Calcium</td><td>32%</td></tr>
+                        <tr class="even"><td>Iron</td><td>4%</td></tr>
+                        <tr class="odd"><td>Magnesium</td><td>n/a</td></tr>
+                        <tr class="even"><td>Folate</td><td>n/a</td></tr>
+                        <tr class="odd"><td>Potassium</td><td>n/a</td></tr>
+                        <tr class="even"><td>Vitamin B12</td><td>n/a</td></tr>
+                        <tr class="odd"><td>Phosphorus</td><td>n/a</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <img src="http://tracker.diabetes.org/myfoodadvisor/media/images/box-bot.png" width="289" height="3" alt="" />
+            <div class="button-group">
+            
+                <a href= "/explore/search/?healthier_id=2782" class="btnLarge-expand"><span>Find a Healthier Alternative</span></a>
+                <a href="#healthy-popup" class="modal"><img src="http://tracker.diabetes.org/myfoodadvisor/media/images/question-mark.png" alt="What is a Healthier Alternative?"/></a>
+                <a href="/explore/compare/2782/" class="btnLarge-expand"><span>Compare This Food to...</span></a>
+                <a href="#compare-popup" class="modal"><img src="http://tracker.diabetes.org/myfoodadvisor/media/images/question-mark.png" alt="What does this do?"/></a>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    
+    <div id="popup-background">
+    </div>
+    
+    <div id="healthy-popup" class="modalWindow">
+        <div class="modalTop"> </div>
+        <div class="modalInner">
+            <div class="popup-image"><img src="http://tracker.diabetes.org/myfoodadvisor/media/images/green-question-mark.gif" alt="question mark" /></div>
+            <div class="popup-image-body">
+                <h4>What is a healthier alternative?</h4>
+                <p class="description">Healthier alternatives are foods within the same food group that are overall lower in saturated fat and sodium and higher in fiber.</p>
+                <div class="popup-button simplemodal-close">
+                    <a href="#" class="button"><span>OK</span></a>
+                </div>
+            </div>
+            <div class="clear"> </div>
+        </div>
+        <div class="modalBottom"> </div>
+    </div>
+    
+    <div id="compare-popup" class="modalWindow">
+        <div class="modalTop"> </div>
+        <div class="modalInner">
+            <div class="popup-image"><img src="http://tracker.diabetes.org/myfoodadvisor/media/images/green-question-mark.gif" alt="question mark" /></div>
+            <div class="popup-image-body">
+                <h4>What does this do?</h4>
+                <p class="description">Search for a food to display side by side comparison of nutritional information</p>
+                <div class="popup-button simplemodal-close">
+                    <a href="#" class="button"><span>OK</span></a>
+                </div>
+            </div>
+            <div class="clear"> </div>
+        </div>
+        <div class="modalBottom"> </div>
+    </div>
+
+    <div id="add-modal" class="modalWindow">
+        <div class="modalTop"> </div>
+        
+        <div class="modalInner">
+            <h3>Java Chiller, mocha/caramel, small (Sonic Drive-In)</h3>
+            <!-- 1 serving -->
+            <p class="description">How much would you like to add?<br/>The typical serving size is 1 serving</p>
+            <form action="/create_dish/add/2782/" method="post" name="add_form">
+                
+                    <p>Add <input type="text" class="short" value="1" name="amount" /><select id="serving_unit_number" name="serving_unit_number" class="serving_unit_number">
+                                
+                                    <option value="1">serving</option>
+                                
+                                    <option value="2"></option>
+                                
+                                    <option value="3"></option>
+                                
+                                    <option value="4"></option>
+                                
+                                    <option value="5"></option>
+                                
+                                    <option value="6"></option>
+                                
+                                    <option value="7"></option>
+                                
+                                    <option value="8"></option>
+                                
+                                    <option value="9"></option>
+                                
+                                    <option value="10"></option>
+                                
+                                    <option value="11"></option>
+                                
+                                    <option value="12"></option>
+                                
+                                    <option value="13"></option>
+                                
+                                    <option value="14"></option>
+                                
+                                    <option value="15"></option>
+                                
+                                    <option value="16"></option>
+                                
+                                    <option value="17"></option>
+                                
+                                    <option value="18"></option>
+                                
+                                    <option value="19"></option>
+                                
+                                    <option value="20"></option>
+                                
+                                </select>
+                    </p>
+                
+                <input type="hidden" name="ingredient" value="2782" />
+                <a href="#" class="button" onclick="document.add_form.submit()"><span>Add It!</span></a>
+                <a href="#" class="button simplemodal-close" ><span>Cancel</span></a>
+            </form>
+        </div>
+        
+        <div class="modalBottom"> </div>
+    </div>
+    
+
+        </div>
+        </div>
+        <div id="footer">
+            <p>Copyright 2009 American Diabetes Association</p>
+            <ul>
+                <li class="first"><a href="/">MyFoodAdvisor Home</a></li>
+                <li><a href="http://www.diabetes.org/">ADA Home</a></li>
+            </ul>
+        
+        </div>
+    </div>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-2200333-50']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+    </body>
+</html>

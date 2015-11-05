@@ -9,7 +9,6 @@ import argparse
 import QProberClass
 import DocumentSummaryClass
 
-
 #################### New Search and Classification Session #################################
 parser = argparse.ArgumentParser(prog='ADB Project 2', description = 'how to use the script')
 parser.add_argument('-host', help = 'URL to the database to be classified', required = True)
@@ -32,13 +31,13 @@ print '\n\nClassification Result: \n'
 for each in category:
 	print each
 
-for each in urlSet.keys():
-	print '\n' + each + ': '+str(len(urlSet[each]))
+#for each in urlSet.keys():
+#	print '\n' + each + ': '+str(len(urlSet[each]))
 
 
 # to summarize database
 ## TEST
-# c = DocumentSummaryClass.DocumentSummary(category,site)
-# c.generateSummaries()
+c = DocumentSummaryClass.DocumentSummary(category,urlSet,site)
+c.generateSummaries()
 
 

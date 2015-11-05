@@ -44,11 +44,6 @@ class QProber:
 				urlSet[parent].extend(urls)
 			else:
 				urlSet[parent] = urls
-			if parent != 'Root':
-				if eachRule[0] in urlSet:
-					urlSet[eachRule[0]].extend(urls)
-				else:
-					urlSet[eachRule[0]] = urls
 		
 		tDocCts = 0 # total number of document counts
 		for eachCat in categoryCts.keys():

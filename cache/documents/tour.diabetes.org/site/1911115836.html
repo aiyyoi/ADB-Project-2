@@ -1,0 +1,3340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<base href="http://tour.diabetes.org/site/PageServer?pagename=TC_team_start" />
+<title>Tour de Cure by American Diabetes Association:  </title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="Keywords" content=" " />
+<meta name="Description" content="American Diabetes Association's Tour de Cure: a series of fundraising cycling events held nationwide. The Tour is a ride, not a race, with routes designed for everyone from the occasional rider to the experienced cyclist." />
+<meta name="Robots" content="index, follow" />
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="../yui3/yui/yui-min.js"></script><noscript>&nbsp;</noscript>
+<script type="text/javascript" src="../js/convio/modules.js?version=2.9"></script><noscript>&nbsp;</noscript>
+<script type="text/javascript">
+var Y = YUI({base: '../yui3/',
+insertBefore: 'yui_marker_loader_css', // insert all YUI module css before customstyle so it can be overridden
+debug: false, 
+modules: getModules('../', 'convio', false)});
+</script><noscript>&nbsp;</noscript>
+
+
+
+
+<script type="text/javascript" src="../js/utils.js"></script><noscript>&nbsp;</noscript>
+
+<script type="text/javascript" src="../js/obs_comp_rollup.js"></script><noscript>&nbsp;</noscript>
+
+
+<link href="../css/themes/default.css" rel="stylesheet" type="text/css" />
+<link href="../css/themes/alphacube.css" rel="stylesheet" type="text/css"/>
+
+
+<link href="../css/UserGlobalStyle.css" rel="stylesheet" type="text/css" />
+
+
+
+
+<link rel="stylesheet" type="text/css" id="yui_marker_loader_css" />
+<link href="../css/CustomStyle.css" rel="stylesheet" type="text/css" />
+<link href="../css/CustomWysiwygStyle.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+<meta name="CnvHeaderVersion" content="v5.0" />
+
+
+<!-- ADDITIONAL METAS -->
+<!--<meta name="author" content="Daniel Hartanto" />-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8"/>
+
+<!-- SOCIAL MEDIA METAS -->
+<!--facebook-->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://tour.diabetes.org/site/PageServer?pagename=TC_team_start" />
+<meta property="og:image" content="http://main.diabetes.org/ws/tr/tr2014/img/Tour-og-image.jpg" />
+<meta property="og:image:secure_url" content="https://donations.diabetes.org/ws/tr/tr2014/img/Tour-og-image.jpg" />
+<meta property="fb:admins" content="daniel.hartanto" />
+	
+<!-- Social: Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@AmDiabetesAssn" />
+<meta name="twitter:creator" content="@AmDiabetesAssn" />
+<meta name="twitter:title" content="Tour de Cure: American Diabetes Association" />
+<meta name="twitter:description" content="American Diabetes Association's Tour de Cure: a series of fundraising cycling events held nationwide. The Tour is a ride, not a race, with routes designed for everyone from the occasional rider to the experienced cyclist." />
+<meta name="twitter:image:src" content="https://donations.diabetes.org/ws/tr/tr2014/img/Tour-og-image.jpg" />
+<meta name="twitter:url" content="http://tour.diabetes.org/site/PageServer?pagename=TC_team_start" />
+<!-- Social: Google+ / Schema.org  -->
+<meta itemprop="name" content="Tour de Cure: American Diabetes Association" />
+<meta itemprop="description" content="American Diabetes Association's Tour de Cure: a series of fundraising cycling events held nationwide. The Tour is a ride, not a race, with routes designed for everyone from the occasional rider to the experienced cyclist." />
+<meta itemprop="image" content="https://donations.diabetes.org/ws/tr/tr2014/img/Tour-og-image.jpg" />
+
+<link rel="shortcut icon" href="../images/ada_favicon.ico" type="image/vnd.microsoft.icon" />
+<!-- EXTERNAL CSS DEPENDENCIES -->
+<!-- CDN -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" />
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css">
+<!-- LOCAL -->
+<link rel="stylesheet" href="../ws/css/magnific-popup-min.css">
+
+
+
+<!-- CUSTOM CSS -->
+<style>
+body,p,h1,h2,h3,h4,a,sup,span,li{
+font-family: 'Montserrat', Arial, sans-serif;
+}
+
+#sthoverbuttons #sthoverbuttonsMain {
+  width: 38px !important;
+  padding: 0px !important; 
+}
+a, a:hover, a:active, a:visited, a:link{color:#C41230;}
+img.map, map area{
+    outline: none;
+}
+h1,h2{
+font-weight:bold;
+color:#333333;
+}
+h3,h4{
+color:#333333;
+}
+p,li{
+font-size:11pt;
+font-weight:normal;
+}
+select{height:30px !important;line-height:30px;}
+.redText {
+color:#C41230 ;
+}
+.lc_FilterTable{margin-bottom:10px;}
+.milestone-title{font-weight:bold; font-size:12pt;}
+
+h1{font-size:30pt;}
+h2{font-size:23pt;}
+h3{font-size:18pt;}
+h4{font-size:16pt;}
+
+.centerDiv {
+max-width:1024px;
+min-width:320px;
+position:relative;
+margin:0 auto;
+}
+.whiteContentDiv img{
+	max-width:450px;
+}
+
+label{font-weight:normal;}
+div.responsive a:visited, div.responsive a:link {
+    color: #C41230;
+}
+/*.vScrollList ol {
+  list-style-type: none;
+  padding-left: 5px;
+}*/
+
+/*magnificpop iframe*/
+.mfp-iframe-scaler iframe {
+  background: #FFF;
+}
+
+
+/*CTA*/
+#logo {
+max-width:310px;
+float:left;
+padding-top:7px;
+padding-left:5px;
+}
+#logo img{
+max-width:310px;
+width:100%;
+height:auto;
+}
+#CTARight{
+float:left;	
+max-width:680px;
+width:100%;
+}
+#CTARightL, #CTARightR{float:left;}
+#CTARightR{padding-left:55px;max-width:280px;}
+#CTARightL{text-align:center;padding-top:40px;padding-left:35px;}
+#login-container input[type='text'],#login-container input[type='password']{   
+  border: 1px solid #eeeeee;
+  background: #fafafa;
+  color: #999999;  
+  padding:3px;
+}
+#loggedin{text-align:right;}
+#CTAMobile{display:none;background-color:#C42130;height:40px;margin-top:10px;text-transform:uppercase;}
+/*#ctamreg{border-right:1px solid #FFF;}*/
+#CTAMobile a, #CTAMobile a:link, #CTAMobile a:visited, #CTAMobile a:hover{color:#FFF; text-decoration:none;font-size:14pt;padding-top:5px;}
+/*CTA*/
+
+.clearDiv{
+clear:both;height:1px;
+}
+#CTAWrapper{
+margin-bottom:20px;
+}
+#NavWrapper{
+min-height:50px;
+background-color:#343434;
+border-top:#cccccc 5px solid;
+}
+
+/*Banner Homepage*/
+#promoShuffler{
+max-width:1000px;
+min-width:280px;
+width:100%;
+position:relative;
+margin:0 auto;
+background-color:#FFF;
+border:#000 solid 1px;
+height:345px;
+overflow:hidden;
+display:block;
+}
+.promoTeaser{
+margin-top:110px;
+/*text-align:left;*/
+/*margin-left:10px;*/
+color:#FFF;
+font-size:11pt;
+z-index:300;
+font-weight:bold;
+}
+.promoMsg{
+background-color:#F90;
+background: none repeat scroll 0 0 rgba(255, 153, 0, 0.8);
+width:300px;
+height:120px;	
+text-align:left;
+position:absolute;
+top:170px;
+right:10px;
+}
+.promoMsg h4{font-weight:bold;color:#FFF;margin-left:20px;}
+.promoMsg p{font-weight:bold;color:#FFF;margin-left:20px; font-size:10pt;}
+.teaserTxt{display:inline-block;zoom:1;*display:inline;vertical-align:super;}
+.bigplus{font-size:19pt;display:inline-block;zoom:1;*display:inline;}
+.promoMsgTxt{display:inline-block;zoom:1;*display:inline;vertical-align:super;width:250px;}
+.bigChevron{font-size:35pt;display:inline-block;zoom:1;*display:inline;color:#FFF}
+.activePromoLeft,.activePromoMiddle,.activePromoRight{
+border:#000 solid 1px;
+margin-right:5px;
+width:600px;
+height:320px;
+}
+
+.thumbPromo{
+width:180px;
+height:156px;
+border:#000 solid 1px;
+margin:1px;
+}
+
+#promo1, #promo2, #promo3, #promo4, #promo5{
+position:absolute;
+cursor:pointer;
+color:#FFF;
+text-align:center;
+}
+#promo1{background-color:#C41230;background-repeat:no-repeat}
+#promo2{background-color:#C41230;background-repeat:no-repeat}
+#promo3{background-color:#C41230;background-repeat:no-repeat}
+#promo4{background-color:#C41230;background-repeat:no-repeat}
+#promo5{background-color:#C41230;background-repeat:no-repeat}
+
+#promoSlider{
+display:none;
+max-width:700px;
+min-width:280px;
+position:relative;
+margin-top:20px;
+margin-bottom:20px;
+margin-left:auto;
+margin-right:auto;	
+}
+#promoSlider img{
+max-width:700px;
+min-width:280px;
+width:100%;
+height:auto;	
+}
+.composite-example > div { background: white }
+.composite-example > div > img { display: block; }
+.composite-example > div .cycle-overlay { 
+    color: white; background: black; opacity: .6; filter:alpha(opacity=60);
+    position: absolute; bottom: 0; width: 100%; padding: 15px;font-weight:bold;font-size:14pt;
+}
+/*End Banner Homepage*/
+
+/*menu navbar regular */
+#adanav, #adanav ul, #adanav li, #adanav a{
+margin: 0;
+padding: 0;
+border: none;
+outline: none;	
+z-index:500 !important;
+}
+
+#adanav a, #adanav a:active, #adanav a:hover, #adanav a:visited{
+text-decoration:none !important;
+color:#FFF;
+}
+#adanav {
+height:50px;
+max-width:1000px;
+min-width:750px;
+width:100%;
+position:relative;
+margin:0 auto;
+display:block;
+}
+
+#adanav li{
+position:relative;
+list-style:none;
+float:left;
+display:block;
+height:50px;
+padding-left:5px;
+padding-right:50px;
+/*width:25%;*/	
+}
+
+#adanav ul{
+display:none;
+-webkit-box-shadow: 0px 5px 5px -2px rgba(50, 50, 50, 0.75);
+-moz-box-shadow: 0px 5px 5px -2px rgba(50, 50, 50, 0.75);
+box-shadow: 0px 5px 5px -2px rgba(50, 50, 50, 0.75);	
+}
+
+#adanav li a{
+display:block;
+/*text-align:center;*/
+/*min-width:150px;*/
+padding-top:15px;
+padding-left:5px;
+text-decoration:none;
+/*text-transform:uppercase;*/
+font-size:13px;
+font-weight:bold;
+height:50px;
+}
+
+#adanav ul{
+position:absolute;
+top:50px;
+left:0;
+background-color:#FFF;
+}
+
+#adanav li:hover > ul {
+display:block;
+margin-top:-5px;
+}
+#adanav li:hover {
+background-color:#FFF;
+border-top:solid 5px #C41230;
+}
+#adanav li:hover > a{
+	color:#C41230;
+}
+
+#adanav ul li{
+height:0;
+overflow:hidden;
+padding:0;
+float:none;	
+}
+#adanav li:hover > ul li{
+height:50px;
+overflow:visible;
+padding:0;
+border:none;	
+}
+#adanav ul li a{
+width:216px;
+margin:0;
+border:none;
+color:#C41230 !important;
+text-align:left;
+padding-left:7px;
+font-size:12px;
+}
+.bborder{
+border-bottom:#C41230 5px solid !important;	
+}
+/*menu navbar regular */
+/*mobile menu bar */
+.ctaTopNavM {
+    color: #fff !important;
+    display: inline-block;
+    font-size: 11pt;
+    font-weight: bold;
+    height: 45px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+	float:left;
+	width:50%;
+}
+.ctaTopNavMBlack{	
+	color: #fff !important;
+    display: inline-block;
+    font-size: 11pt;
+    font-weight: bold;
+    height: 40px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+	float:left;
+	width:50%;
+	background-color:#343434;
+}
+#ctaTourCenter{border-right:#FFF solid 1px;}
+.ctaTopNavMobile {
+    display: none;
+}
+a.ctaTopNavM:hover{text-decoration:none;}
+.primaryMNav{color:#FFF;padding-top:8px;padding-bottom:8px;padding-left:10px;border-top:1px solid #FFF;font-weight:bold;cursor:pointer;}
+.subMNav{background-color:#CCC;padding-left:10px;display:none;padding-top:5px;padding-bottom:5px;}
+/*mobile menu bar */
+
+/*homepage*/
+#upperBoxHPage{
+padding-top:10px;
+padding-bottom:50px;
+}
+#MiddleBox h2{
+padding-left:10px;	
+}
+#NTLeft{width:230px;}
+#NTLeft, #NTRight{float:left;padding:10px;}
+#NTRight{max-width:770px;min-width:280px;width:100%;text-align:center;}
+.NTList ul{
+list-style-type:none;
+text-align:left;	
+padding-left:0px;
+padding-right:0px;
+padding-bottom:5px;
+padding-top:5px;
+}
+.NTList li{margin-bottom:7px;}
+.NTList{
+display:inline-block;
+zoom:1;
+*display:inline;
+vertical-align:top;
+width:30%;
+min-width:200px;
+}
+#LowerBox{
+background:url('../ws/tr/tr2014/img/bg_grey_striped.png') repeat;
+padding-top:15px;
+padding-bottom:15px;	
+}
+#LowerBoxL, #LowerBoxR{float:left;width:48%;max-width:480px;min-width:280px;padding:10px;}
+#LowerBoxL img{
+max-width:450px;
+width:100%;
+height:auto;
+}
+#LowerBoxL .LowerBoxRRBox img{
+max-width:145px;
+height:auto;
+width:100%;	
+}
+.LowerBoxRRBox{
+display:inline-block;
+zoom:1;
+*display:inline;	
+max-width:145px;
+width:100%;	
+margin-bottom:5px;
+}
+#ADAfbfeed{
+text-align:center;
+}
+#fytSearchBar{background:url(../ws/tr/tr2014/img/findtour_bg.png) no-repeat;height:77px;overflow:hidden;text-align:center;line-height:77px;max-width:997px;position:relative;margin:10px auto;display:block;}
+#fytSearchBar input{line-height:normal;vertical-align:middle;}
+#fytSearchBar select{vertical-align:middle;}
+.bigwhitespan{font-weight:bold;color:#FFF;display:inline-block;zoom:1;*display:inline;vertical-align:middle;line-height:normal;font-size:14pt;}
+/*homepage*/
+/*natl sponsor*/
+.ntl-sponsor{
+display:inline-block;
+zoom:1;
+*display:inline;
+padding:10px;
+}
+#NatSponsorWrapper h2{padding-left:10px}
+.ntl-sponsor img{max-width:150px;width:100%;height:auto;}
+/*natl sponsor*/
+/*sitemap*/
+#SiteMapWrapper{background:url(../ws/tr/tr2014/img/bg_sitemap.gif) repeat-x #333333;}
+.siteMapCol a, .siteMapCol a:hover, .siteMapCol a:visited, .siteMapCol a:active {
+color:#FFF !important;
+}
+#SiteMapWrapper ul{
+list-style-type:none;
+margin:0;
+padding:0;
+}
+
+.siteMapSub{
+margin-top:15px !important;
+}
+
+.siteMapCol{
+/*display:inline-block;
+zoom:1;
+*display:inline;*/
+float:left;
+vertical-align:top;
+margin-right:15px;
+margin-bottom:35px;
+font-size:11pt;
+text-transform:uppercase;
+padding-left:10px;
+padding-right:10px;
+width:130px;
+text-align:left !important;
+}
+.siteMapSub li{
+text-transform:capitalize !important;
+font-size:10pt !important;
+margin-bottom:5px;
+}
+#toggle-sitemap{cursor:pointer;}
+#sideMapContentBox{display:none;}
+/*sitemap*/
+
+/*footer*/
+#footerL, #footerR{width:48%;float:left;}
+#footerR{text-align:right;}
+#footerL{text-align:left;}
+/*footer*/
+/*magnific popup custom*/
+.mfp-iframe-holder .mfp-content {
+    min-height: 400px;    
+}
+
+/*National Static SubPage */
+.whiteContentDiv{background-color:#FFF;padding:25px;}
+#upperBox{padding-top:10px; background:url('../ws/tr/tr2014/img/hero-bg2.jpg') no-repeat; background-size:100% auto;background-position:top center;}
+
+/*TR 5 Teaser Boxes*/
+#customTRPg1, #customTRPg2, #customTRPg3, #customTRPg4, #customTRPg5 {
+  display: inline-block;
+  zoom: 1;
+  /*border: #DCDCDC solid 1px;*/
+  border-radius: 7px;
+  vertical-align: top;
+}
+#customTRPg1Content img, #customTRPg2Content img, #customTRPg3Content img, #customTRPg4Content img, #customTRPg5Content img{display:none;}
+
+#customTRPg1 img, #customTRPg2 img{
+max-width:300px;height:auto;width:100%;	
+}
+#customTRPg3 img, #customTRPg4 img, #customTRPg5 img{
+max-width:235px;height:auto;width:100%;	
+}
+#customTRPg1, #customTRPg2 {width:48%;padding:10px;margin:5px;}
+#customTRPg3, #customTRPg4, #customTRPg5 {width:31.5%;padding:10px;margin:5px;}
+.readMore{text-align:right;}
+
+.grayOuter{
+background:url('../ws/tr/tr2014/img/bg_grey_striped.png') repeat;
+padding-top:15px;
+padding-bottom:15px;
+}
+
+/*All Events Page Listing*/
+.tr_search_left {
+    float: left;
+    margin-right: 5px;
+    width: 55%;
+}
+.tr_search_right {
+    float: left;
+    text-align: right;
+    width: 40%;
+}
+
+/*TR Pages Entry*/
+#upperBoxTR{
+padding-top:10px; 
+
+/*background:url('../ws/tr/tr2014/img/hero-bg2.jpg') no-repeat; */
+
+background-repeat:no-repeat;
+background-size:100% auto;
+background-position:top center;
+}
+
+/*TR stuff */
+#trEntryLeftContent{padding-right:7px;}
+#trLeftNav, #trRightCol{
+	float:left;		
+}
+#trLeftNav{
+	width:220px;
+	padding:10px;	
+}
+#trRightCol{
+	min-width:280px;
+	width:70%;
+	padding:10px;	
+}
+#trRightCol a, #trRightCol a:hover, #trRightCol a:visited, #trRightCol a:active{
+color:#C41230;
+}
+#trRightCol h2{font-size:16pt;}
+#trRightCol h3{font-weight:bold;}
+#trEntryFieldContent{padding:10px;overflow: auto;}
+#subLeftTROption{border-top:10px solid #000;}
+#subLeftOptHeader{background-color:#000; padding-top:5px;padding-bottom:5px;text-align:center; display:none;cursor:pointer;color:#FFF;font-weight:14pt;}
+.subLeftOpt{
+border:#CCCCCC solid 1px;display:block;	
+}
+.subLeftOpt a, .subLeftOpt a:active, .subLeftOpt a:visited{
+color:#333;	
+display:block;
+padding:5px;
+}
+.subLeftOpt a:hover{
+background: #ab102a; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ab102a 0%, #c41230 50%, #c41230 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ab102a), color-stop(50%,#c41230), color-stop(100%,#c41230)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ab102a 0%,#c41230 50%,#c41230 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ab102a 0%,#c41230 50%,#c41230 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ab102a 0%,#c41230 50%,#c41230 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ab102a 0%,#c41230 50%,#c41230 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ab102a', endColorstr='#c41230',GradientType=0 ); /* IE6-9 */
+	color:#FFF;	
+}
+.subLeftOpt span.fa.fa-chevron-circle-right {
+  color: #FFF;
+  margin-left: 7px;
+}
+#localTRFBlikebox {
+  margin: 5px;
+}
+#trEntryLeft, #trEntryRight{float:left; margin:0;}
+#trEntryLeft {max-width:650px;width:98%;}
+#trEntryRight{max-width:300px; min-width:280px; width:100%;}
+#trMap {
+  max-width: 300px; min-width:280px; width:100%;
+}
+#trMap, #trSummaryBox {
+  float: left;
+}
+#trSummaryBox { 
+  width: 50%;
+}
+#oriTRContent{
+display:none;
+}
+
+div#company_tally div {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+#createTeamTR, #joinTeamTR, #regIndividual {
+  display: inline-block;
+  zoom: 1;
+  width: 218px;
+  padding: 10px;
+  margin: 5px;
+  border: #D8D8D8 solid 1px;
+  border-radius: 5px;
+vertical-align:top;
+}
+#localTRSponsorContent{padding-bottom:50px}
+#localTRSponsorContent img{max-width:200px;height:auto;}
+
+#localTRSponsorHeading{padding-top:5px;padding-bottom:5px;}
+
+#top-fundraisers, #top-ind-teams, #top-companies, #top-famfriend-team, #top-corp-team, #top-club-org {
+  border: 1px solid #ccc;
+  background: #ffffff;
+  background: -moz-linear-gradient(top, #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f3f3f3), color-stop(51%,#ededed), color-stop(100%,#ffffff));
+  background: -webkit-linear-gradient(top, #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%);
+  background: -o-linear-gradient(top, #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%);
+  background: -ms-linear-gradient(top, #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%);
+  background: linear-gradient(to bottom, #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
+  padding:5px;
+  font-size:14pt;
+}
+#top-fundraisers-result, #top-ind-teams-result, #top-companies-result, #topcompaniesfinalresult, #top-famfriend-team-result, #top-corp-team-result, #top-club-org-result{
+padding:5px;
+border: 1px solid #ccc;
+font-size:12px;	
+margin-bottom:2px;
+margin-top:2px;
+height:100px;
+overflow-y:auto;
+}
+#topcompaniesfinalresult{font-size:14px;padding-left:12px;}
+/*hide topcompanies topteam and heading not needed for now*/
+#top-ind-teams,#top-ind-teams-result,#topcompaniesfinalresult, #top-companies{display:none;}
+
+#trRightBoxSummary{
+	float:right;
+	max-width:350px;
+	/*min-width:300px;*/
+	background-color:#F6F6F6;
+	padding:15px;
+	border: 1px solid #d8d8d8;
+    border-radius: 8px;
+margin-left:5px;
+margin-bottom:5px;
+margin-top:10px;
+}
+#trSingleCol{max-width:1000px;min-width:280px;padding:5px;width:98%;}
+#trSingleCol img{max-width:350px;width:95%;height:auto;}
+#logo_container{width:225px;position:relative;margin-left:auto;margin-right:auto;padding-bottom:15px;}
+#trRightBoxSummary img{width:95%;height:auto;}
+#trRightBoxSummary div{margin-top:10px;margin-bottom:10px;}
+
+#trImageGreeting img{max-width:300px;width:100%;height:auto;}
+
+/*Thermometer*/
+#progress-arrow{width:9px !important;height:11px !important;}
+#thermometer-container {
+	margin: 30px 0 25px;
+	max-width: 411px; /* max-width to prevent from stretching full parent-container width - to allow using % margin-left to position #progress-arrow */
+	position:relative;
+}
+#custom-thermometer {
+	background: url(../ws/tr/tr2014/img/thermometer_grey.png) no-repeat;
+	max-width: 411px;
+	height: 70px;
+}
+#thermometer-progress-fill {
+	background: url(../ws/tr/tr2014/img/thermometer_red.png) no-repeat;
+	height: 70px;
+	width: 1%;  /* use this % to control progress */
+	position: absolute;
+  	top: 20px;
+}
+#progress-arrow { 
+	margin-left: 1%;  /* use this % to control progress of top arrow, must be 1% less than red background */
+}
+
+
+
+/*Route Length*/
+#routeLengthH{
+background:	url(../ws/tr/tr2014/img/icon_route_length.png) 2px 7px no-repeat;
+}
+#routeCITH{
+background:	url(../ws/tr/tr2014/img/icon_checkin_time.png) 2px 3px no-repeat;
+}
+#routeStartTimeH{
+background:	url(../ws/tr/tr2015/images/icon_start_time_green_v3.png) 0px 0px no-repeat;
+}
+#routeEndTimeH{
+background:	url(../ws/tr/tr2014/img/icon_start_time.png) 0px 0px no-repeat;
+}
+#routeAvgSpeedH{
+background:	url(../ws/tr/tr2015/images/icon_ride_speed2.png) 2px 5px no-repeat;
+}
+#routeLengthH,#routeCITH, #routeStartTimeH, #routeEndTimeH,#routeAvgSpeedH{
+font-weight:bold;
+text-align:center;
+display:inline-block;
+zoom:1;
+*display:inline;
+font-size:9pt;
+height:40px;	
+margin-right:2px;
+border:1px solid #CCC;
+padding-left: 16px;
+padding-right: 7px;
+padding-top: 8px;
+width:100%;
+}
+.routeLHCell,.routeCITCell,.routeSTCell,.routeETCell,.routeAVGCell{
+font-weight:bold;
+text-align:center;
+display:inline-block;
+zoom:1;
+*display:inline;
+font-size:8pt;
+min-height:40px;	
+margin-right:2px;
+border:1px solid #CCC;
+padding-left: 5px;
+padding-right: 7px;
+padding-top: 8px;
+width:100%;
+vertical-align:top;
+}
+#routeLengthH, .routeLHCell{max-width:125px;}
+#routeCITH, .routeCITCell{max-width:130px;}
+#routeStartTimeH, .routeSTCell{max-width:105px;}
+#routeEndTimeH, .routeETCell{max-width:100px;}
+#routeAvgSpeedH, .routeAVGCell{max-width:130px;}
+.routegreycol{background-color:#CCC;}
+#routeData{display:none;}
+#routeMWrapper{display:none;}
+#routeWrapperR{display:block;}
+
+/*Donation*/
+button#donor_matching_employersearchBtn.step-button.action-button, button#pstep_cancel, button#pstep_next, button#pstep_previous, button#pstep_finish {
+  background-color: #c41230 !important;
+  background-image: none !important;
+  border: medium none !important;
+  border-radius: 4px !important;
+  color: #ffffff !important;
+  cursor: pointer !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  line-height: 16px !important;
+  /* margin: 0 !important; */
+  margin-left: 5px;
+  padding: 8px 18px !important;
+  text-decoration: none !important;
+  width: 100px !important;
+}
+
+/*Milestone Badge*/
+.sideIconBadge {
+    float: left;
+    padding-top: 7px;
+    width: 43px;
+}
+.sideText {
+    float: left;
+    margin-left: 12px;
+    max-width: 180px;
+    padding-top: 15px;
+}
+.milestone-image {max-width:50px !important;width:100% !important;}
+
+/*Registration*/
+div.responsive div.ErrorMessage.page-error>span.field-error-text {
+    width: 90%;
+}
+#team_find_registration_type_container a, #team_find_registration_type_container a:hover, #team_find_registration_type_container a:active, #team_find_registration_type_container a:link, #team_find_registration_type_container a:visited{color:#C41230;}
+div.responsive a.step-button,
+div.responsive button.step-button,
+div.responsive a.step-button:hover,
+div.responsive button.step-button:hover{
+    background-color: #C41230;
+    border: 1px solid #C41230;
+    cursor: pointer;
+    padding: 10px 7px;
+    min-width: 132px;
+    border-radius: 3px; /*CSS3, the box won't curve in older browsers*/
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    
+    /* background */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c41230', endColorstr='#c41230');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#c41230', endColorstr='#c41230')";
+    background-image: -ms-linear-gradient(top, #c41230, #c41230);
+    background-image: -webkit-linear-gradient(top, #c41230, #c41230);
+    background-image: -moz-linear-gradient(top, #c41230, #c41230);
+    background-image: -o-linear-gradient(top, #c41230, #c41230);
+    background-image: linear-gradient(top, #c41230, #c41230);
+    
+    color: #FFF;
+    overflow: visible;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+div#team_find_search_results_container div.list-component-cell-column-join-link a {
+    display: inline-block;
+    zoom: 1;
+    text-decoration: none;
+    background-color: #C41230;
+    cursor: pointer;
+    padding: 5px 7px;
+    min-width: 132px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border: 1px solid #c41230;
+    background-color: #c41230;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c41230', endColorstr='#c41230');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#c41230', endColorstr='#c41230')";
+    background-image: -ms-linear-gradient(top, #c41230, #c41230);
+    background-image: -webkit-linear-gradient(top, #c41230, #c41230);
+    background-image: -moz-linear-gradient(top, #c41230, #c41230);
+    background-image: -o-linear-gradient(top, #c41230, #c41230);
+    background-image: linear-gradient(top, #c41230, #c41230);
+    color: #FFF;
+    text-align: center;
+}
+.header-container{font-weight:bold;font-size:16pt;}
+.progress-bar-container {
+    margin-top: 25px;
+
+	padding:8px;
+}
+div.progress-bar-step-container.progress-bar-step-current div.progress-bar-step-number-container {
+    background-color: #c41230;
+}
+div.registration-page-container div.section-header {
+    background: none repeat scroll 0 0 #c41230;
+}
+div.registration-page-container div.section-sub-header {
+    background: none repeat scroll 0 0 #ffffff;
+    border-top: medium none;
+    color: #333333;
+}
+.section-header-text, span#title_container {
+    color: #ffffff;
+}
+.progress-bar-step-selectable .progress-bar-step-text-container a {
+    color: #c41230 !important;
+}
+.section-container {
+padding:0;
+}
+#team_find_search_results_container a, #team_find_search_results_container a:link, #team_find_search_results_container a:hover,#team_find_search_results_container a:visited, #team_find_search_results_container a:active{ 
+color:#c41230;
+}
+#user_type_campaign_banner_container{display:none;}
+div#user_type_login_container {
+  float: left;
+  width: 45%;
+  border-top-color: #dad7d0;
+  border-bottom-color: #dad7d0;
+}
+
+div#user_type_new_participant_registration_container {
+  float: left;
+  width: 236px;
+  margin-left: 12px;
+  margin-right: 12px;
+  padding: 10px;
+}
+#team_find_existing_team_search_container {
+  position: relative;
+  top: -41px;
+}
+#fund_goal_container, span#pt_instruction_container, div.donation-level-row-decoration-container > label.donation-level-row-label > span.donation-level-amount-text {
+  display: none !important;
+}
+.section-head {
+  background: #dddddd;
+  font-size: 23px;
+  line-height: 1.2em;
+  font-weight: bold;
+  padding: 12px;
+  border-bottom: 1px solid #efefef;
+  border-left: 1px solid #dedede;
+  color: #C41230;
+}
+#head-fr-goal, #head-self-don {
+  margin: 40px auto 15px;
+}
+#shirt-table tr td {
+  vertical-align: top !important;
+  text-align: center !important;
+  width: 33%;
+}
+#shirt-table tr td img {
+  display: block;
+  margin: 2px auto 6px !important;
+  max-width:200px;
+  width:100%;
+  height:auto;
+}
+
+
+/*Donate Search*/
+div#find_participant_header_container {
+    background: none repeat scroll 0 0 #c41230;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+div#find_participant_header_container h2 {
+    color: #ffffff;
+}
+div#find_participant a {
+    color: #c41230;
+}
+#find_participant div.participant-find-search-container {
+    width: 90%;
+}
+#search_part_team div.ui-tabs-panel input {
+    margin: 2px 5px 5px 1px;
+    width: 171px;
+}
+.ui-widget-header {
+  border:none;
+  background: #FFF;
+background-image:none;
+  color: #222222;
+  font-weight: bold;
+}
+
+/*PFIND*/
+#find_participant div.list-component-row {
+  margin-bottom: 8px;
+}
+#search_part_team ul li {
+  margin-left: 5px;
+}
+
+
+/*RESPONSIVE CSS */
+@media (max-width:1023px){
+#trEntryLeft,#trEntryRight{
+float:none;
+position:relative;
+margin:0 auto;	
+}
+}
+@media (max-width:999px){
+#CTAWrapper{margin-bottom:0px;}	
+#CTAMobile{display:block;clear:both;}
+#promoSlider{display:block;}
+#promoShuffler{display:none;}
+#adanav{display:none;}
+.ctaTopNavMobile{display:block;}
+#NTLeft, #NTRight{float:none;position:relative;margin-left:auto;margin-right:auto;}
+#LowerBoxL, #LowerBoxR{float:none;margin-left:auto;margin-right:auto;}
+#LowerBoxL .LowerBoxRRBox img{max-width:90px;}
+.LowerBoxRRBox{max-width:90px;}
+#footerL, #footerR{width:99%;float:none;text-align:center;margin-bottom:10px;}
+#fytSearchBar{display:none;}
+#logo, #CTARight{float:none;}
+#CTARight{display:none;}
+#trSummaryBox { 
+  width: 45%;
+}
+}
+@media (max-width:874px){
+#trLeftNav, #trRightCol {
+  float: none;
+  position:relative;
+  margin:5px auto;
+}	
+#trRightCol{width:90%;}
+#subLeftOptHeader{display:block;}
+.subLeftOpt{display:none;}
+#subLeftTROption{border-top:none;}
+}
+@media (max-width:767px){
+#customTRPg1, #customTRPg2, #customTRPg3, #customTRPg4, #customTRPg5{
+display:block;
+width:300px;
+position:relative;
+margin-left:auto;	
+margin-right:auto;
+}
+}
+@media (max-width:699px){
+#trMap{float:none;margin:5px auto;}
+#trSummaryBox{width:90%;float:none;}
+/*route table mobile*/
+
+#routeMWrapper{display:block;max-width:600px;min-width:280px;background-color:#FFC}
+#routeWrapperR{display:none;}
+.routeLHCellM,.routeCITCellM,.routeSTCellM,.routeETCellM,.routeAVGCellM{
+width:100%;
+border:none;
+padding:5px;
+}
+.routeLHCellM{cursor:pointer; background-color:#C41230;color:#FFF;font-size:12pt; border-bottom:1px solid #FFF;}
+.routeCITCellM,.routeSTCellM,.routeETCellM,.routeAVGCellM{
+display:none;
+}
+.routemobilelabel{font-weight:bold;}
+}
+@media (max-width:474px){
+.ctaTopNavM{
+font-size:8pt;	
+}
+.whiteContentDiv {padding:8px;}
+}
+@media (max-width:449px){
+.whiteContentDiv img{
+	max-width:280px;
+}
+}
+
+@media print {
+  a[href]:after {
+    content: none;
+  }
+}
+
+
+
+</style>
+<!--[if lt IE 9]>
+<style>
+#customTRPg1 img, #customTRPg2 img{
+width:300px;	
+}
+
+#customTRPg3 img, #customTRPg4 img, #customTRPg5 img{
+width:235px;	
+}
+#routeLengthH,#routeCITH, #routeStartTimeH, #routeEndTimeH, #routeAvgSpeedH,.routeLHCell,.routeCITCell,.routeSTCell,.routeETCell,.routeAVGCell{
+padding-left:0px;
+padding-right:0px;
+}
+</style>
+<![endif]-->
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+    }
+    return "";
+}
+function checkCookie(whichCookie) {
+    var ftimereg=getCookie(whichCookie);
+    if (ftimereg=="y") {
+        return true;
+    }
+}
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+//Initiation 
+ga('create', 'UA-2200333-63', 'auto');
+
+//Logged In - Custom Dimension 1
+
+//Source Code - Custom Dimension 2
+
+
+//Convio Fix for referrers
+if (typeof CONVIO!="undefined" && CONVIO){
+    if (CONVIO.referrer.length != 0) {
+	  ga('set', 'referrer', CONVIO.referrer);      
+    }
+}
+
+//this will pass the entire Convio Page URL
+ga('send', 'pageview', 'http://tour.diabetes.org/site/PageServer?pagename=TC_team_start');
+
+
+ga('require', 'ecommerce','ecommerce.js');
+//ecommerce donation thank you
+
+
+//ecommerce registration thank you
+
+
+</script>
+<!-- End Google Analytics -->
+<!-- Google Remarketing Tag -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1070296966;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+<!-- End Google Remarketing Tag -->
+
+ 
+
+</head>
+<body
+
+
+
+
+
+
+
+
+
+
+
+
+ng-app="" id="ng-app" class="mobile"  
+>	
+
+<!-- Facebook SDK -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;js.async=true;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<!-- Abandonment Popup -->
+<!-- Magnific Popup Inline -->
+<style>
+.mfp-close-btn-in .mfp-close {
+color:#FFF !important;
+font-weight:bold;
+font-size:25pt;
+}
+.redbtn {
+display: block;
+zoom: 1;
+background-color: #C41230 !important;
+color: #FFF !important;
+width: 150px;
+padding: 8px;
+text-align: center;
+text-decoration: none !important;
+border-radius: 4px;
+text-transform: lowercase !important;
+cursor:pointer;
+font-weight:bold;
+}
+#appop{
+width:320px;
+margin:0 auto;
+}
+</style>
+<div id="appop" class="devpop mfp-hide" style="padding:10px; background-color:#000;">
+<center>
+<!--<img src="../ws/img/elmo.jpg" style="max-width:293px; width:100%; height:auto;" />-->
+
+<br /><br />
+<div style="max-width:619px;width:100%;background-color:#FFF;">
+<img src="../ws/tr/tr2015/images/tcap.jpg" style="max-width:619px; width:100%; height:auto;" />
+<h3 style="font-size:18pt;font-weight:bold;color:#C41230;"><em>This could be you!</em></h3>
+<p style="font-size:14pt; margin-left:5px;margin-right:5px;">Tour de Cure won't be the same without you.<br />Register today and take the ride of your life!</p>
+<br />
+
+<a class="redbtn" id="registertoday">Register Today!</a>
+<br /><br />
+</div>
+</center>
+<br /><br />
+</div>
+
+
+
+
+    
+    
+		
+	
+
+
+<div id="CTAWrapper" class="outerWrapper"><div class="centerDiv">
+  <div id="logo"><a href="PageServer?pagename=TC_homepage"><img src="../ws/tr/tr2014/img/logo2.png" border="0" alt="American Diabetes Association Tour de Cure" /></a></div>
+  <div id="CTARight">    
+   
+    <div id="CTARightL">     
+    
+    <a class="magframebox" href="https://donations.diabetes.org/site/SPageNavigator/TC_Tour_Search_DH?sta=y"> <img src="../ws/tr/tr2014/img/btn_register.png" alt="Register" id="register-btn"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="TR?pg=pfind&amp;fr_id=10970"><img src="../ws/tr/tr2014/img/btn_donate.png" alt="Donate" id="donate-btn"></a> 
+       
+    </div>
+    
+    
+    <div id="CTARightR">
+        
+      <div id="login-container">
+        <h4 style="font-weight:bold;display:inline-block;zoom:1;*display:inline;font-size: 12pt;margin-right: 5px;">My Tour Center</h4>
+        <a href="SPageServer?pagename=CC_PasswordRecovery" id="need-help" style="font-size: .75em;" target="_blank">Password Help</a>
+        <div class="clearDiv">&nbsp;</div>
+        <form id="login-form" name="login-form">
+        <input type="hidden" name="method" value="login">
+          <input id="username" type="text" name="user_name" placeholder="username" style="width:215px;margin-bottom:5px;">
+          <input id="password" type="password" name="password" placeholder="password">
+          <input id="login-btn" name="login" type="image" title="GO" value="GO" src="../ws/tr/tr2014/img/btn_go.png" style="vertical-align:middle;">          
+        </form>
+      </div>
+      
+    </div>
+  </div>
+  <div class="clearDiv">&nbsp;</div>
+ 
+  <div id="CTAMobile">
+  
+  <a class="magframebox ctaTopNavM" id="ctamreg" href="https://donations.diabetes.org/site/SPageNavigator/TC_Tour_Search_DH?sta=y">Register</a>
+  <a class="ctaTopNavM" id="ctamdon" href="TR?pg=pfind&amp;fr_id=10970">Donate</a> 
+  
+  </div>
+
+
+</div>
+
+<!--exception css-->
+<style>
+
+
+</style>
+</div>
+<div id="NavWrapper" class="outerWrapper"><ul id="adanav" ng-controller="siteNavMapController">
+<li class="menuArrow" ng-repeat="menu in sitenavs" ng-if="menu.primary" ng-cloak class="ng-cloak">
+<a href="javascript:void(0);">{{menu.title}}</a>
+    <ul ng-if="menu.menus">
+        <li ng-repeat="submenu in menu.menus" ng-class="{true: 'bborder', false: ''}[submenu.bborder == 'yes']" ng-if="submenu.magpop">
+          <a class="magframebox" ng-href="{{submenu.action}}">{{submenu.title}}</a>
+        </li>
+        <li ng-repeat="submenu in menu.menus" ng-class="{true: 'bborder', false: ''}[submenu.bborder == 'yes']" ng-if="!submenu.magpop">
+          <a ng-href="{{submenu.action}}">{{submenu.title}}</a>
+        </li>
+    </ul>
+</li>
+</ul>
+<div class="clearDiv">&nbsp;</div>
+<div id="ctaTwoMobile2" class="ctaTopNavMobile">
+<a id="ctaTourCenter" class="ctaTopNavM" href="SPageServer?pagename=TC_tourcenter&mlogin=y">My Tour Center &nbsp;&nbsp;<img border="0" src="../ws/tr/tr2014/img/chevron.jpg"></a>
+<a id="ctaMenu" class="ctaTopNavM" onclick="jQuery('#adanavmobile').toggle();" href="javascript:void(0);">Menu <img border="0" src="../ws/tr/tr2014/img/menuicon.jpg"></a>
+<div class="clearDiv"> </div>
+</div>
+
+
+<div id="adanavmobile" class="ctaTopNavMobile" ng-controller="siteNavMapController" style="display:none;">
+<div ng-if="menu.primary" ng-cloak class="ng-cloak" ng-repeat="menu in sitenavs">
+<div class="primaryMNav">{{menu.title}}</div>
+<div class="subMNav" ng-if="menu.menus">
+<div ng-repeat="submenu in menu.menus" ng-if="submenu.magpop"><a class="magframebox" ng-href="{{submenu.action}}">{{submenu.title}} &nbsp; &raquo;</a></div>
+<div ng-repeat="submenu in menu.menus" ng-if="!submenu.magpop"><a class="magframebox" ng-href="{{submenu.action}}">{{submenu.title}} &nbsp; &raquo;</a></div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<div id="upperBox" class="outerWrapper">
+<div class="centerDiv whiteContentDiv" >
+
+<h1>Start/Join a Team</h1>
+<h3>CREATE A TEAM AND CELEBRATE THE 25TH ANNIVERSARY OF THE <br/>TOUR DE CURE</h3>
+
+
+<p><img src="../ws/tr/tr2016/img/celebrate2016.jpg" alt="" style="width:300px;height:auto;float: right; margin-left:10px;" /> It&#8217;s more fun to Tour together! Gather your friends, family and co-workers and ride to Stop Diabetes&reg;. Serving as a Tour de Cure Team Captain can be so rewarding! By forming a team YOU can be a leader in the fight to Stop Diabetes&reg;. All it takes is the willingness to reach out to others and a little extra time, and you&#8217;ll become one of the ADA&#8217;s most important volunteers.</p>
+<p>Teams come in all sizes &#8212; two to get started and five or more people to make a full team! Teams options include:</p>
+
+<ul style="list-style-position:inside;">
+<li>Corporate/Company Teams</li>
+<li>Family Teams</li>
+<li>Club Teams</li>
+<li>National Teams - Companies and organizations with teams that participate in multiple events across the country.</li>
+</ul>
+
+<h3>Get started today!</h3>
+<ol class="number-list">
+<li>Find your Tour de Cure event, then register by clicking the "Start a Team" button.</li>
+<li>Choose a team name&mdash;make sure to inform your team members of the name.</li>
+<li>Have your team members register by finding the event, clicking on "Join an Existing Team" and searching for your team name.</li>
+<li>Set goals and work together to make your Tour de Cure experience fun and memorable!</li>
+<li>If you've already registered as an individual and wish to become a team captain, please email <a href="mailto:touradmin@diabetes.org">touradmin@diabetes.org</a> and include your name, event and team name. We will move your registration to the team.</li>
+</ol>
+<h3>Join an existing team</h3>
+<h3>Take advantage of your team webpage!</h3>
+<ol class="number-list">
+<li>A webpage is created for each team when you register&mdash;it's easy to get started! Team Captains can update their team's webpage and use the provided tools to track their team roster and fundraising progress. Login to your Tour Center and follow the prompts.</li>
+<li>Enter a message about your team (be sure to personalize it and let people know why your team is riding and that others are welcome to join your team), upload a photo, and you're ready to go!</li>
+<li>Team captains can send group email messages to team members and monitor the team's progress directly from his or her Tour Center.</li>
+<li>We're here to help if you need it. Call your local ADA staff person at 1-888-DIABETES or our online support line. The link to chat or talk is in your Tour Center.</li>
+</ol>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="NatSponsorWrapper" class="outerWrapper"><div class="centerDiv">
+<h2>Our National Sponsors</h2>
+<div class="ntl-sponsor"><a href="http://www.goldsgym.com/" target="_blank"><img src="../ws/tr/tr2014/img/national_team/golds-gym-logo-2014.png" alt="Golds Gym" style="max-width:180px" /></a></div>
+
+<div class="ntl-sponsor"><a href="http://www.lillydiabetes.com/Pages/index.aspx" target="_blank"><img src="../ws/tr/tr2014/img/sponsors/lilly.png" alt="Lilly" /></a></div>
+<div class="ntl-sponsor"><a href="http://www.primalwear.com/" target="_blank"><img src="../ws/tr/tr2014/img/sponsors/primal.png" alt="Primal Wear" /></a></div>
+<div class="ntl-sponsor"><a href="http://www.gomacro.com/" target="_blank"><img src="../ws/tr/tr2014/img/sponsors/gomacro.png" alt="Go Macro" /></a></div>
+<!--<div class="ntl-sponsor"><a href="http://www.beewellforlife.com/" target="_blank"><img src="../ws/tr/tr2014/img/sponsors/beewell.png" alt="BeeWell" /></a></div>-->
+<div class="clearDiv">&nbsp;</div>
+</div>
+
+
+
+</div>
+<div id="SiteMapWrapper" class="outerWrapper"><div class="centerDiv">
+<img onclick="jQTC('#sideMapContentBox').toggle();" id="toggle-sitemap" src="../ws/tr/tr2014/img/btn_sitemap_open.png" style="margin-bottom:8px;">
+
+<div id="sideMapContentBox" ng-controller="siteNavMapController">
+
+<div class="clearDiv" style="height:20px;">&nbsp;</div>
+<center>
+<ul id="siteMapContent">
+<li class="siteMapCol" ng-repeat="menu in sitenavs">
+          <a ng-href="{{menu.action}}">{{menu.title}}</a>
+          <ul class="siteMapSub" ng-if="menu.menus">
+            <li ng-repeat="submenu in menu.menus" ng-if="submenu.magpop">
+              <a class="magframebox" ng-href="{{submenu.action}}">{{submenu.title}}</a>
+            </li>
+<li ng-repeat="submenu in menu.menus" ng-if="!submenu.magpop">
+              <a ng-href="{{submenu.action}}">{{submenu.title}}</a>
+            </li>
+          </ul>
+        </li>
+</ul>
+</center>
+<div class="clearDiv" style="height:20px;">&nbsp;</div>
+</div>
+</div>
+
+
+
+</div>
+<div id="FooterWrapper" class="outerWrapper"><div class="centerDiv">
+<div class="clearDiv" style="height:20px;">&nbsp;</div>
+<div id="footerL">
+<h4><strong>Connect With Us</strong></h4>
+<a target="_blank" href="//www.facebook.com/adatourdecure"><img alt="Facebook" src="../ws/tr/tr2014/img/social/facebook.png"></a>
+<a target="_blank" href="//twitter.com/AmDiabetesAssn"><img alt="Twitter" src="../ws/tr/tr2014/img/social/twitter.png"></a>
+<a target="_blank" href="//www.youtube.com/user/AmericanDiabetesAssn"><img alt="YouTube" src="../ws/tr/tr2014/img/social/youtube.png"></a>
+</div>
+<div id="footerR">
+<p><a href="PageServer?pagename=TC_contact">Contact Us</a>&nbsp;|&nbsp;<!--<a href="PageServer?pagename=TC_privacypolicy">Privacy</a>&nbsp;|&nbsp;<a href="PageServer?pagename=TC_security">Security</a>&nbsp;|&nbsp;<a href="PageServer?pagename=TC_eventnews">Media</a>&nbsp;|&nbsp;--><a target="_blank" href="http://www.diabetes.org/">Visit ADA</a></p>
+<p>2015
+ American Diabetes Association
+<br />1701 N. Beauregard Street
+<br />Alexandria, VA 22311
+<br />1-800-DIABETES</p>
+</div>
+<div class="clearDiv">&nbsp;</div>
+<center>
+<div style="padding:10px;">
+<p>&copy;1995-2015 <a href="http://www.diabetes.org/" target="_blank">American Diabetes Association</a>.<br />All rights reserved. Use of this Web site constitutes acceptance of our <a href="http://www.diabetes.org/about-us/terms-of-use.html" target="_blank">Terms of Use</a> and <a href="http://tour.diabetes.org/site/PageServer?pagename=TC_privacypolicy" target="_blank">Privacy Policy.</a></p>
+<p>The American Diabetes Association is the nation's leading 501(C)3 nonprofit charity providing diabetes research, information and advocacy. Your donations are tax-deductible to the full extent of the law. All transactions on our Web site are safe and secure.</p>
+</div>
+</center>
+<div class="clearDiv" style="height:20px;">&nbsp;</div>
+</div>
+
+
+
+</div>
+<div id="dhDEBUG" style="display:none;">S4 id is: 19<br />currTRID is: 10970</div>
+
+<!-- use jQuery 1.8.3 for stable performance within Convio environment instead of 1.11.3 -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../ws/js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
+<script type="text/javascript">
+jQuery.noConflict();
+</script>
+
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/luminateExtend/1.7.1/luminateExtend.min.js"></script>
+<script src="../ws/js/jquery.cycle216.min.js"></script>
+<script src="../ws/js/jquery.magnific-popup.min.js"></script>
+<script src="../ws/js/jquery.backstretch.min.js"></script>
+<script src="../ws/js/jquery.placeholder.js"></script>
+<script src="../ws/js/Autolinker.min.js"></script>
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.27/angular-sanitize.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.2/webfont.js"></script>
+
+<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+<script src="../ws/js/underscore-min.js"></script>
+<script src="../ws/js/clamp.min.js"></script>
+
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="../ws/js/respond_fix.js" type="text/javascript"></script></script>
+<![endif]-->
+<!--[if lte IE 7]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/json3/3.3.1/json3.min.js"></script>
+<![endif]-->
+
+<script type="text/javascript">
+var jQTC = jQuery.noConflict(true);//rev make this specific for 183 through var
+
+jQTC.support.cors = true;
+//google maps 
+var geocoder;
+var map;	
+
+//national team by tr
+var prevCID=0;
+var amtRaised;
+var teamGoal;
+var totalAR=0;
+var totalTG=0;
+
+
+var randomPromo = Math.floor(Math.random()*5) + 1;
+var whichPromoIsActive;
+var startWidth;
+var eqHeightChecker;
+var allFiveDivLoaded = [];
+var ie = getInternetExplorerVersion();
+
+var nVer = navigator.appVersion;
+	var nAgt = navigator.userAgent;
+	var browserName  = navigator.appName;
+	var fullVersion  = ''+parseFloat(navigator.appVersion); 
+	var majorVersion = parseInt(navigator.appVersion,10);
+	var nameOffset,verOffset,ix;
+	var OSName="Unknown OS";
+	
+	//abandonment popup vars
+	var isRegPage = "19";
+	var isRegTYPage = "";
+	var whatFRID = "";
+	var whatRegStep = "";
+	
+	//global rthanksurl
+	var rthanksurl;
+
+jQTC(document).ready(function(){
+startWidth = jQTC(window).width();
+//initiate Luminate Extend		
+        luminateExtend({
+            apiKey: 'adap1234',
+            path: {
+                nonsecure: 'http://main.diabetes.org/site/',
+                secure: 'https://donations.diabetes.org/site/'
+            }
+        });		
+//cleanup inline style on TR WYSIWYG personal/team
+jQTC('#fr_rich_text_container p').each(function(){
+jQTC(this).removeAttr('style');
+jQTC(this).removeAttr('class');
+jQTC(this).css('font-size','11pt');
+});
+jQTC('#fr_rich_text_container span').each(function(){
+jQTC(this).removeAttr('style');
+jQTC(this).removeAttr('class');
+jQTC(this).css('font-size','11pt');
+});
+jQTC('#fr_rich_text_container br').each(function(){
+jQTC(this).removeAttr('style');
+jQTC(this).removeAttr('class');
+});
+jQTC('#fr_rich_text_container em').each(function(){
+jQTC(this).removeAttr('style');
+jQTC(this).removeAttr('class');
+});
+
+
+//placeholder polyfill
+jQTC('input, textarea').placeholder();
+
+if (jQTC('#promoSlider').length){
+	jQTC('#promoSlider').cycle();
+}
+if (jQTC('#upperBoxHPage').length){
+jQTC('#upperBoxHPage').backstretch('../ws/tr/tr2014/img/hero-bg2.jpg');
+}
+
+if (jQTC(window).width() > 875) {
+           showDesktopRender();
+        } else {		
+           showMobileRender();
+        }
+		
+        if (ie == 8) {
+            document.body.onresize = function() {
+				if(jQTC(window).width() != startWidth){
+					equalheight('.eqheight');
+					if (jQTC(window).width() > 875) {
+						showDesktopRender();
+						startWidth = jQTC(window).width();
+					} else{					
+						showMobileRender();
+						startWidth = jQTC(window).width();
+					} 
+				}
+			}
+		} else {
+            jQTC(window).resize(function() {				
+				if(jQTC(window).width() != startWidth){
+					equalheight('.eqheight');
+					if (jQTC(window).width() > 875) {
+						showDesktopRender();
+						startWidth = jQTC(window).width();
+					} else {
+						showMobileRender();
+						startWidth = jQTC(window).width();
+					}
+				}
+            });
+		}        
+
+//hide that google conversion iframe
+jQTC("iframe[name~='google_conversion_frame']").css({'display':'none','height':'0px'});
+
+//API Login
+jQTC('#login-form').submit(function() {
+   login('#login-form');
+   return false;
+});
+jQTC('#login-form-mobile').submit(function() {
+   login('#login-form-mobile');
+   return false;
+});
+
+//PROTOTYPE API DEV
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			jQTC('#give_hdr_container').hide();
+			jQTC('#find_hdr_container').show();
+
+
+//rthanks redirect to pc2
+		
+
+jQTC('#subLeftOptHeader').click(function(){
+	jQTC('.subLeftOpt').toggle();
+});
+
+jQTC('.magframebox').magnificPopup({
+			disableOn: 0,
+			type: 'iframe',
+			mainClass: 'mfp-fade',
+			removalDelay: 160,
+			preloader: false,
+			fixedContentPos: false
+});
+
+whichPromoIsActive = randomPromo;	
+renderPromo(whichPromoIsActive);
+clickPromoHandler();
+mobileMenuHandler();
+findYourNearbyRide();
+
+//abandonment pop
+	   if((isRegPage === '27')&&(isRegTYPage != 'rthanks')&&(whatRegStep === 'reg')){		   
+		   APop();
+	   }
+	   jQTC('#registertoday').click(function(){
+			jQTC.magnificPopup.close();
+	   });
+
+});
+
+//function render Top Company Formatting
+function renderTopComp(){
+	jQTC('#top-companies-result').hide();
+	jQTC('<div id="topcompaniesfinalresult" style="padding-left:5px;"></div>').insertAfter(jQTC('#top-companies-result'));
+	jQTC('a','#top-companies-result').addClass('compLink');
+	jQTC('#topcompaniesfinalresult').append(jQTC('.compLink'));
+	jQTC('<span class="craisedamt"></span><br />').insertAfter(jQTC('.compLink'));
+
+	jQTC('#top-companies-result').html(function(i,h){
+		return h.replace(/&nbsp;/g,'');
+	});
+	var tfcrregExp = /\(([^)]+)\)/g;
+	var tfcrraw = jQTC('#top-companies-result').text();
+	var matches = tfcrraw.match(tfcrregExp);
+	var counter=0;
+	jQTC('.craisedamt').each(function(){
+           var craisedamtfinal = matches[counter].replace(/\(|\)/g, "");
+	   jQTC(this).html('&nbsp;&ndash;&nbsp;'+craisedamtfinal);
+	   counter++;
+	});
+}
+//function renderNatTeamByTR
+function renderNatTeamByTR(){
+	if(jQTC('#team-search-results').length > 0){
+		luminateExtend.api.request({
+			api: 'teamraiser', 
+			callback: getTeamsByInfoCallback, 
+			
+			data: 'method=getTeamsByInfo&response_format=json&event_type='+evtype+'&fr_id=&team_company_id=&list_page_size=1000&list_sort_column=name'
+			
+		}); 
+	}
+}
+window.getTeamsByInfoCallback ={
+error: function(data){
+jQTC('#team-search-errors').remove();
+jQTC('#team-search-results').html('');        
+jQTC('.team-search-form').prepend('<div id="team-search-errors">' + '<div class="alert alert-danger">' + data.errorResponse.message + '</div>' +  '</div>');
+},
+success: function(data){
+jQTC('#team-search-errors').remove();
+jQTC('#team-search-results').html('');        
+if(data.getTeamSearchByInfoResponse.totalNumberResults == 0) {
+   jQTC('.team-search-form').prepend('<div id="team-search-errors">' + '<div class="alert alert-danger">' +  'No team exist yet.' +  '</div>' + '</div>');
+}else {
+jQTC('#team-search-results').html('<div class="well"></div>');
+jQTC('#team-search-results .well').append(jQTC('#cpwrap').html());
+
+var teamList = luminateExtend.utils.ensureArray(data.getTeamSearchByInfoResponse.team);
+
+jQTC.each(teamList, function() {
+if(this.hasOwnProperty('companyId')){	
+    
+	if(jQTC("#parent"+this.companyId).length){
+		amtRaised = parseInt(this.amountRaised) / 100;
+		teamGoal = parseInt(this.goal) / 100;		
+		var arFixed = amtRaised.toFixed(0);
+		var tgFixed = teamGoal.toFixed(0);		
+		jQTC('#parent'+this.companyId).show();
+		jQTC('#parent'+this.companyId).append('<div class="team-search-row compid'+this.companyId+'">' + '<h3><a href="' + this.teamPageURL + '"><strong>' + this.name + '</strong></a>&nbsp;&nbsp; &ndash; &nbsp;&nbsp;<a class="redbtn" href="'+this.joinTeamURL+'">Join</a></h3><div class="subdata"><p><strong>Team Captain:</strong><br />' + this.captainLastName + ', ' + this.captainFirstName + '</p></div><div class="subdata"><p><strong>Members:</strong><br />' + this.numMembers + '</p></div><div class="subdata"><p><strong>Total goal:</strong><br /><span class="redtxt"> $'+ numberWithCommas(tgFixed)+'</span></p></div><div class="subdata"><p><strong>Amount Raised:</strong><br /><span class="redtxt"> $' + numberWithCommas(arFixed) + '</span></p></div></div>');
+		if (prevCID == 0){
+				prevCID = parseInt(this.companyId);	
+		}else {		
+				if(prevCID != parseInt(this.companyId)){
+				   prevCID = parseInt(this.companyId);
+				   //check if that id has been previously done and reset / resume accordingly
+				   if(jQTC("#VTAR"+this.companyId).text() != ""){
+					var cartemp = jQTC("#VTAR"+this.companyId).text();
+					totalAR = parseInt(cartemp.replace(/\,/g,''));
+				   }else {
+					totalAR = 0;   
+				   }
+				   if(jQTC("#VTTG"+this.companyId).text() != ""){
+					var ctgtemp = jQTC("#VTTG"+this.companyId).text();
+					totalTG = parseInt(ctgtemp.replace(/\,/g,''));
+				   }else {
+					totalTG = 0;   
+				   }				  
+				} 
+		}
+		totalAR = totalAR + amtRaised;
+		totalTG = totalTG + teamGoal;
+        var totalARF = totalAR.toFixed(0);
+        var totalTGF = totalTG.toFixed(0);
+		jQTC("#TAR"+this.companyId).html("Total Amount Raised: $<span id='VTAR"+this.companyId+"'>" +numberWithCommas(totalARF)+"</span>");
+        jQTC("#TTG"+this.companyId).html("Total Goal: $<span id='VTTG"+this.companyId+"'>"+numberWithCommas(totalTGF)+"</span>");
+		}		
+	}
+});
+
+}
+}
+
+};
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+//function showDesktop and showMobile
+function showMobileRender(){
+
+		
+}
+function showDesktopRender(){
+		
+}
+
+
+//function check TR Greeting Uploaded user image
+function checkUserTRImg(){	
+	if(jQTC('#page_body_container','#trImageGreeting').find('img:first').length < 1){			
+		jQTC('#trImageGreeting').html('<img src="../ws/tr/tr2016/img/Tour2016_Local_GP.jpg" />');	
+	}
+	jQTC('#trImageGreeting > img').css('width','300px');
+}
+function checkUserTRBgImg(){
+if(jQTC('img:first','#TRBGPicCstm').length){	
+	var custTRBG = jQTC('img:first','#TRBGPicCstm').attr('src');
+	jQTC('#upperBoxTR').css('background-image','url('+custTRBG+')');	
+}else{
+	jQTC('#upperBoxTR').css('background-image','url(\'../ws/tr/tr2014/img/hero-bg2.jpg\')');
+}
+}
+
+//render Route Table
+function renderRouteTable(){
+	//reading route data and format
+	var rawRouteData = jQTC('#routeData').text();
+	var routeInstance = rawRouteData.split('||');
+	var routes = {};
+	
+	for (var a=0;a<routeInstance.length;a++){
+		var tempcurrRoute = routeInstance[a].toString();		
+		var tempRouteParams = tempcurrRoute.split(',');	
+		routes[a] = {routeName:jQTC.trim(tempRouteParams[0]),routeCIT:jQTC.trim(tempRouteParams[1]),routeStart:jQTC.trim(tempRouteParams[2]),routeEnd:jQTC.trim(tempRouteParams[3]),routeAvg:jQTC.trim(tempRouteParams[4])};
+		//console.log(routes[a]);		
+	}
+	var len = 0;
+	for (var o in routes){		
+		len++;	
+	}
+	
+	//console.log('size of routes: '+len);
+	//alert(routes[0].routeName);
+	//jQTC('#trEntryLeftContent').append('<a id="routedesc"></a><div id="routedescintro"></div>');
+	//jQTC('#routedescintro').load('../site/TR?pg=informational&fr_id=&type=fr_informational&sid=22041&pgwrap=n');
+	
+	
+	var routeRendering ="<div id='routeWrapperR'>"; 
+	routeRendering += "<div id='routeLengthH'>Route Length</div><div id='routeCITH'>Check-In Time</div><div id='routeStartTimeH'>Start Time</div><div id='routeEndTimeH'>End Time</div><div id='routeAvgSpeedH'>Avg Pace</div>";
+	for (var d=0;d<len;d++){
+		routeRendering +="<div class='clearDiv' style='height:2px;'>&nbsp;</div>";		
+		if (isOdd(d) == true){			
+			routeRendering +="<div class='routeLHCell routegreycol'>"+routes[d].routeName+"</div>";			
+			routeRendering +="<div class='routeCITCell routegreycol'>"+routes[d].routeCIT+"</div>";
+			routeRendering +="<div class='routeSTCell routegreycol'>"+routes[d].routeStart+"</div>";
+			routeRendering +="<div class='routeETCell routegreycol'>"+routes[d].routeEnd+"</div>";
+			routeRendering +="<div class='routeAVGCell routegreycol'>"+routes[d].routeAvg+"</div>";			
+		} else {			
+			routeRendering +="<div class='routeLHCell'>"+routes[d].routeName+"</div>";			
+			routeRendering +="<div class='routeCITCell'>"+routes[d].routeCIT+"</div>";
+			routeRendering +="<div class='routeSTCell'>"+routes[d].routeStart+"</div>";
+			routeRendering +="<div class='routeETCell'>"+routes[d].routeEnd+"</div>";
+			routeRendering +="<div class='routeAVGCell'>"+routes[d].routeAvg+"</div>";						
+		}			
+	}
+	routeRendering += "</div>";
+	
+	
+	jQTC('#trRightCol').append(jQTC(routeRendering+'<br />'));
+	
+	//mobile
+	var routeRenderingM = "<div id='routeMWrapper'>";
+	for (var d=0;d<len;d++){	
+		routeRenderingM +="<div id='routeItem"+d+"' class='routeLHCellM'>"+routes[d].routeName+"<span style='float:right;margin-right:5px;' class='fa fa-chevron-circle-down'></span><div class='clearDiv'>&nbsp;</div></div>";			
+		routeRenderingM +="<div class='routeCITCellM routeItemClass"+d+"'><span class='routemobilelabel'>Check In :</span> "+routes[d].routeCIT+"</div>";
+		routeRenderingM +="<div class='routeSTCellM routeItemClass"+d+"'><span class='routemobilelabel'>Start at :</span> "+routes[d].routeStart+"</div>";
+		routeRenderingM +="<div class='routeETCellM routeItemClass"+d+"'><span class='routemobilelabel'>End at :</span> "+routes[d].routeEnd+"</div>";
+		routeRenderingM +="<div class='routeAVGCellM routeItemClass"+d+"'><span class='routemobilelabel'>Avg. Pace :</span> "+routes[d].routeAvg+"</div>";	
+		
+	}
+	routeRenderingM +="</div>";
+	routeRenderingM +="<div class='clearDiv' style='height:2px;'>&nbsp;</div>";
+	
+	
+	jQTC('#trRightCol').append(jQTC(routeRenderingM+'<br />'));
+	
+	
+	jQTC('.routeLHCellM').click(function(){
+	jQTC('.routeCITCellM').hide();
+	jQTC('.routeSTCellM').hide();
+	jQTC('.routeETCellM').hide();	
+	jQTC('.routeAVGCellM').hide();	
+	var getRouteItemIDRaw = jQTC(this).prop('id');
+	var getRouteItemID = parseInt(getRouteItemIDRaw.substr(getRouteItemIDRaw.length-1));	
+	jQTC('.routeItemClass'+getRouteItemID).toggle();
+	});
+}
+
+//render entry TR
+//function renderTopFundraisersAndTeam
+function renderTopFundraisersAndTeam(){		
+
+	jQTC('#hidden-teamlists ol').each(function(){
+		var topcatstring = jQTC(this).prev('p').text();
+		if(topcatstring.indexOf("Family/Friend") != -1){
+			jQTC(this).attr('id','toplisting1');
+		}
+		if(topcatstring.indexOf("Corporate") != -1){
+			jQTC(this).attr('id','toplisting2');
+		}
+		if(topcatstring.indexOf("Club/Organization") != -1){
+			jQTC(this).attr('id','toplisting3');
+		}		
+	});	
+	
+	jQTC('#top-famfriend-team-result').append(jQTC('#toplisting1'));	
+	jQTC('#top-corp-team-result').append(jQTC('#toplisting2'));
+	jQTC('#top-club-org-result').append(jQTC('#toplisting3'));
+	
+	jQTC('#individuals li a').each(function(){
+		jQTC(this).attr('class','participantLink');	
+		jQTC(this).parent().prepend(this);
+ 	});	
+	
+}
+
+function renderEntryTR(){
+	
+	jQTC('#oriTRContent').hide();
+			
+	jQTC('#trEntryLeft').prepend('<div id="trEntryLeftContent">'+jQTC('#fr_html_container').html()+'</div>');
+	//jQTC('#trEntryLeft').find('img').css('display','none');
+	//jQTC('#trEntryLeftContent').find('img').css({'max-width':'450px','width':'98%','height':'auto'});	
+	renderRouteTable();
+		
+	renderTopFundraisersAndTeam();
+	
+}
+
+//function populateSID
+function populateSID(){
+	jQTC('#customTRPg1Content').load('../site/TR?pg=informational&fr_id=&type=fr_informational&sid=22035&pgwrap=n',function(){jQTC('#customTRPg1Content').find('#FrNews_ArticlePage').hide();if(jQTC('#customTRPg1Content').find('p:first').has('img').length){jQTC('#ctrP1').text(jQTC('#customTRPg1Content').find('p:eq(1)').text())}else{jQTC('#ctrP1').text(jQTC('#customTRPg1Content').find('p:first').text())};allFiveDivLoaded[0]='y';});	
+	jQTC('#customTRPg2Content').load('../site/TR?pg=informational&fr_id=&type=fr_informational&sid=22040&pgwrap=n',function(){jQTC('#customTRPg2Content').find('#FrNews_ArticlePage').hide();if(jQTC('#customTRPg2Content').find('p:first').has('img').length){jQTC('#ctrP2').text(jQTC('#customTRPg2Content').find('p:eq(1)').text())}else{jQTC('#ctrP2').text(jQTC('#customTRPg2Content').find('p:first').text())};allFiveDivLoaded[1]='y';});	
+	jQTC('#customTRPg3Content').load('../site/TR?pg=informational&fr_id=&type=fr_informational&sid=22046&pgwrap=n',function(){jQTC('#customTRPg3Content').find('#FrNews_ArticlePage').hide();if(jQTC('#customTRPg3Content').find('p:first').has('img').length){jQTC('#ctrP3').text(jQTC('#customTRPg3Content').find('p:eq(1)').text())}else{jQTC('#ctrP3').text(jQTC('#customTRPg3Content').find('p:first').text())};allFiveDivLoaded[2]='y';});
+	jQTC('#customTRPg4Content').load('../site/TR?pg=informational&fr_id=&type=fr_informational&sid=22030&pgwrap=n',function(){jQTC('#customTRPg4Content').find('#FrNews_ArticlePage').hide();if(jQTC('#customTRPg4Content').find('p:first').has('img').length){jQTC('#ctrP4').text(jQTC('#customTRPg4Content').find('p:eq(1)').text())}else{jQTC('#ctrP4').text(jQTC('#customTRPg4Content').find('p:first').text())};allFiveDivLoaded[3]='y';});	
+	jQTC('#customTRPg5Content').load('../site/TR?pg=informational&fr_id=&type=fr_informational&sid=22042&pgwrap=n',function(){jQTC('#customTRPg5Content').find('#FrNews_ArticlePage').hide();if(jQTC('#customTRPg5Content').find('p:first').has('img').length){jQTC('#ctrP5').text(jQTC('#customTRPg5Content').find('p:eq(1)').text())}else{jQTC('#ctrP5').text(jQTC('#customTRPg5Content').find('p:first').text())};allFiveDivLoaded[4]='y';});
+		
+
+	eqHeightChecker = setInterval(function(){ divHeightEqualizer(); }, 1000);
+	
+}
+//limit char length in multiline and put ellipsis
+function clampThat(whatSelector){
+	var module = document.getElementById(whatSelector);	
+	if ((ie > 9) || (ie == -1)){
+		$clamp(module, {clamp: 3});
+	}else {		
+		$clamp(module,{clamp:'auto'});
+	}
+		
+}
+function divHeightEqualizer(){	
+	if((allFiveDivLoaded[0]==='y')&&(allFiveDivLoaded[1]==='y')&&(allFiveDivLoaded[2]==='y')&&(allFiveDivLoaded[3]==='y')&&(allFiveDivLoaded[4]==='y')){			
+			clampThat('ctrP1');
+			clampThat('ctrP2');
+			clampThat('ctrP3');
+			clampThat('ctrP4');
+			clampThat('ctrP5');				 
+
+			equalheight('.eqheight');
+			clearInterval(eqHeightChecker);
+	}		
+}
+//function renderLocalSponsor
+function renderLocalSponsor(){
+	jQTC('#localEvtSponsor').load('../site/TR?pg=informational&fr_id=&type=fr_informational&sid=22034&pgwrap=n',function(){stripPfromLocalSponsor();});	
+}
+function stripPfromLocalSponsor(){
+	jQTC('p','#localEvtSponsor').replaceWith(function() { return jQTC(this).contents(); });
+}
+//function render SID custom TR page
+function renderSIDTR(){	
+	jQTC('#oriTRContent').hide();
+	//if Evt Manager, pull manage box instead
+	
+	jQTC('#trRightCol').append(jQTC('#page_body_container').html());
+		
+	//if sid is 22039 hide left nav 
+	
+	//alternative addressing default image instead of bp push
+	
+	
+	//Training Calendar Event API
+	
+}
+
+//render National Companies
+function renderNatCompTR(){	
+	jQTC('#trRightBoxSummary').prepend(jQTC('#logo_container'));	
+	jQTC('#trHeading').text(jQTC('#title_container').text());	
+	jQTC('#trSingleCol').append(jQTC('#fr_html_container').html());
+	jQTC('h1:first, h2:first','#trSingleCol').hide(); // temporary to hide those inline headings in national company on Tour
+	var nc_logo_src=jQTC('div#logo_container img').attr('src');
+	var join_ncteam_href='SPageServer?pagename=TC_Natl_Teams&natteam=&logosrc='+nc_logo_src;
+	jQTC('#join-nat-team-a').attr('href', join_ncteam_href);
+	jQTC('#member-target').text(jQTC('table[summary="layout table"] > tbody > tr:nth-child(3) > td:nth-child(2)').text());
+	var rawRaised = jQTC('table[summary="layout table"] > tbody > tr > td:nth-child(2)').text();
+	var noDecRaised = rawRaised.split('.');
+	jQTC('#amt-raised-target').text(noDecRaised[0]);
+	jQTC('#logo_container').removeClass('cstmStatusRight');
+	
+	
+	
+	
+	//pull back the default top listing (08/10)
+	//jQTC('#trSingleCol').append(jQTC('#top_events_title_container').next('div').attr('id','topevttblnc'));
+	//jQTC('#trSingleCol').append(jQTC('#top_events_title_container'));
+	jQTC('#trSingleCol').append(jQTC('#topevttblnc'));
+	jQTC('#trSingleCol').append(jQTC('#top_teams_title_container').next('div').attr('id','topteamtblnc'));
+	jQTC('#trSingleCol').append(jQTC('#top_teams_title_container'));
+	jQTC('#top_teams_title_container').text('Top 10 Teams on Upcoming Events');
+	jQTC('#trSingleCol').append(jQTC('#topteamtblnc'));
+	jQTC('#trSingleCol').append(jQTC('#top_participants_title_container').next('div').attr('id','toppctblnc'));
+	jQTC('#trSingleCol').append(jQTC('#top_participants_title_container'));
+	jQTC('#trSingleCol').append(jQTC('#toppctblnc'));
+	jQTC('.badge-icon-small').css({'width':'16px','height':'16px'});
+}
+function renderUmbrellaTeam(){	
+	jQTC('#trSingleCol').prepend('<h2 id="ucompanyname"><strong>'+jQTC('.cstmTitle').text()+'</strong></h2>');
+	jQTC('#trSingleCol').append(Autolinker.link(jQTC('#fr_rich_text_container').html()));
+	jQTC('#trSingleCol').append('<div class="clrBox" style="height:10px;">&nbsp;</div><div id="ucompanythermo"></div><div class="clrBox" style="height:5px;">&nbsp;</div>');
+	jQTC('#trSingleCol').append(jQTC('#company_page_team_list'));
+	
+	jQTC('.company-row-form-team').hide();
+	jQTC('#trRightBoxSummary').prepend(jQTC('#company_page_company_photo_container'));
+	
+	var UTGoalURL ="https://donations.diabetes.org/site/CRTeamraiserAPI?method=getCompaniesByInfo&api_key=adap1234&v=1.0&response_format=json&fr_id=&company_id=";
+	jQTC.getJSON(UTGoalURL, function(data){
+		var utgoal=commaSeparateNumber(data.getCompaniesResponse.company.goal/100);
+		var utraised=commaSeparateNumber(data.getCompaniesResponse.company.amountRaised/100);
+		jQTC('.indicator-title','#company_page_frstatus3').hide();
+		jQTC('.donation-link-container','#company_page_frstatus3').hide();
+		
+		jQTC('#ucompanythermo').prepend(jQTC('#company_page_frstatus3').html());						
+		jQTC('#ucompanythermo').prepend('<p style="font-size:16pt;"><strong>We have raised <span class="redText">$'+utraised+'</span> toward our of <span class="redText">$'+utgoal+'</span></strong></p>');
+		jQTC('div.thermometer-container div.thermometer-inner').css('background-color','#C41230');
+	});
+}
+function commaSeparateNumber(val){
+    while (/(\d+)(\d{3})/.test(val.toString())){
+      val = val.toString().replace(/(\d+)(\d{3})/, '$1'+','+'$2');
+    }
+    return val;
+}
+function renderTeamTR(){	
+	jQTC('#trSingleCol').append(jQTC('#team_name'));
+	jQTC('#team_name').css({'font-weight':'bold','font-size':'26pt'});
+	jQTC('#team_name').insertBefore(jQTC('#trRightBoxSummary'));
+	jQTC('#trSingleCol').append(Autolinker.link(jQTC('#fr_rich_text_container').html()));
+	
+	    
+    
+            
+    
+	
+	if(jQTC('#team_image img').length > 0){	
+		jQTC('#trRightBoxSummary').prepend(jQTC('#team_image').html());
+	} else{
+		jQTC('#trRightBoxSummary').prepend('<img src="../images/friendraiser_uploads/10960.252532593.custom.jpg" />');
+	}
+	jQTC('#jointeam').attr('href',jQTC('#join_team_button').attr('href'));
+	jQTC('#trRightBoxSummary').append(jQTC('<p>To make a general donation to the team that will not count toward any individual participant,<a href="Donation2?df_id=&PROXY_ID=&PROXY_TYPE=22&FR_ID=">click here</a>.</p>'));
+	jQTC('#trSingleCol').append('<div class="clearDiv">&nbsp;</div><div class="trSingleHalfBottom" id="trSingleColBottomLeft"></div><div class="trSingleHalfBottom" id="trSingleColBottomRight"></div><div class="clearDiv">&nbsp;</div>');
+	jQTC('.trSingleHalfBottom').css({'width':'48%','display':'inline-block','zoom':'1','*display':'inline','vertical-align':'top','margin-right':'3px','border-top-color':'#000','border-width':'10px','border-top-style':'solid'});
+	jQTC('#trSingleColBottomRight').append(jQTC('.team-roster-title-container'));
+	jQTC('#trSingleColBottomRight').append(jQTC('.team-roster-participant-container'));
+	jQTC('img','.team-roster-participant-container').css({'width':'18px','height':'auto'});
+	jQTC('#trSingleColBottomLeft').append(jQTC('.donor-list-indicator-container'));
+	jQTC('.donor-list-indicator-container').eq(1).hide();
+	renderThermo();
+}
+function renderPersonalTR(){
+	jQTC('h2','#personal_page_header').attr('id','tcpersonalpageheader');
+	jQTC('#trSingleCol').append(jQTC('#tcpersonalpageheader'));
+
+	jQTC('#tcpersonalpageheader').insertBefore(jQTC('#trRightBoxSummary'));	
+	jQTC('#trSingleCol').append(Autolinker.link(jQTC('#fr_rich_text_container').html()));
+		
+	   
+    
+                
+    
+	
+	
+	if(jQTC('#personal_page_image_div img').length > 0){	
+		jQTC('#trRightBoxSummary').prepend(jQTC('#personal_page_image_div').html());
+	} else if (jQTC('#cstmVideoContent').length > 0){
+		var cstm_vid = jQTC('#cstmVideoContent').attr('data');		
+		if (((ie > 9) || (ie == -1)) && (typeof cstm_vid != "undefined")){		
+		var start_index = cstm_vid.indexOf("/v/");
+		var vid_url = cstm_vid.substring((start_index+3), (start_index+14));
+
+		jQTC('#trRightBoxSummary').prepend('<iframe id="cstm-vid" src="//www.youtube.com/embed/bzpGnLk1N3U" frameborder="0" allowfullscreen></iframe>');
+		jQTC('#cstm-vid').attr('src', '//www.youtube.com/embed/'+vid_url+'?rel=0&wmode=transparent');
+		jQTC('#cstm-vid').css({'height':'300px','width':'300px'});	
+		} else {
+		jQTC('#trRightBoxSummary').prepend(jQTC('#personal_page_image_div').html());
+		jQTC('#cstmVideoContent').css({'height':'300px','width':'300px'});
+		}
+	} else {
+		jQTC('#trRightBoxSummary').prepend('<img src="../images/friendraiser_uploads/10960.1885689335.custom.jpg" />');
+	}
+	jQTC('#donateTo').attr('href',jQTC('#sidebar_donate_button').attr('href'));
+	jQTC('#viewmyteam').attr('href',jQTC('#personal_page_team_page_link').attr('href'));
+	jQTC('#joinmyteam').attr('href',jQTC('#personal_page_join_team_button').attr('href'));
+
+var myfname = "";
+var mylastcharfname = myfname.slice(-1);
+if(mylastcharfname.toLowerCase() === "s"){jQTC("#cmaornot").append("' ");}else{jQTC("#cmaornot").append("'s ")};
+
+jQTC('#trSingleCol').append('<div class="clearDiv">&nbsp;</div><div class="trSingleHalfBottom" id="trSingleColBottomLeft"></div><div class="trSingleHalfBottom" id="trSingleColBottomRight"></div><div class="clearDiv">&nbsp;</div>');
+jQTC('.trSingleHalfBottom').css({'width':'48%','display':'inline-block','zoom':'1','*display':'inline','vertical-align':'top','margin-right':'3px','border-top-color':'#000','border-width':'10px','border-top-style':'solid'});
+   
+
+jQTC('#trSingleColBottomLeft').append(jQTC('.donor-list-indicator-container'));
+jQTC('.indicator-container','.donor-list-indicator-container').css({'margin-right':'20px'});
+jQTC('.indicator-title','.donor-list-indicator-container').html('<h4><strong>Fundraising Honor Roll</strong></h4>');
+renderThermo();
+}
+
+function checkRedRiderBadge(){
+	var isRS="";
+	var s = isRS.toLowerCase();
+    if (s.indexOf("red") > -1) {
+        jQTC("#RSBadge").show();
+        jQTC("#RSBadgeTxt").show()
+    } else {
+        jQTC("#RSBadge").hide();
+        jQTC("#RSBadgeTxt").hide()
+    }
+}
+
+//find nearby tour
+function findYourNearbyRide(){
+	jQTC('#searchByZIPBar').click(function(){
+		var getZipBar = jQTC('#yourzipbar').val();
+		var getZipFirstFiveBar = getZipBar.substr(0,5);
+		var getDistanceBar = jQTC('#yourdistancebar').val();
+		if((getZipBar != "")&&(isNaN(getZipFirstFiveBar)==false)&&(getDistanceBar !="")){
+			jQTC.magnificPopup.open({
+				items:{
+				src:'https://donations.diabetes.org/site/SPageServer/?pagename=TC_Tour_Search_DH&zip='+getZipFirstFiveBar+'&distance='+getDistanceBar
+				},
+				type:'iframe'
+			},0);
+		} else{
+			alert("please enter a zipcode");	
+		}
+	});
+	jQTC('#searchByZIPBar2').click(function(){
+		var getZipBar = jQTC('#yourzipbar').val();
+		var getZipFirstFiveBar = getZipBar.substr(0,5);
+		var getDistanceBar = jQTC('#yourdistancebar').val();
+		if((getZipBar != "")&&(isNaN(getZipFirstFiveBar)==false)&&(getDistanceBar !="")){
+			window.location.href='https://donations.diabetes.org/site/SPageServer/?pagename=TC_Tour_Search_DH&zip='+getZipFirstFiveBar+'&distance='+getDistanceBar;
+				
+		} else{
+			alert("please enter a zipcode");	
+		}
+	});
+	jQTC('#searchBySTBar').click(function(){
+		var getStateInterestBar = jQTC('#yourstatebar').val();
+		if(getStateInterestBar != ""){
+			jQTC.magnificPopup.open({
+			items:{
+				src:'https://donations.diabetes.org/site/SPageServer/?pagename=TC_Tour_Search_DH&s_event_state='+getStateInterestBar
+				},
+				type:'iframe'
+			},0);
+		} else{
+			alert("please select a state");	
+		}
+	});
+	jQTC('#searchBySTBar2').click(function(){
+		var getStateInterestBar = jQTC('#yourstatebar').val();
+		if(getStateInterestBar != ""){
+			window.location.href='https://donations.diabetes.org/site/SPageServer/?pagename=TC_Tour_Search_DH&s_event_state='+getStateInterestBar;			
+		} else{
+			alert("please select a state");	
+		}
+	});
+	
+}
+
+function getMyZipEvent(whatZip,whatDistance){
+	if((typeof whatDistance == "undefined") || (whatDistance == "")){
+		whatDistance = '50';
+	}
+	luminateExtend.api.request({
+	  api: 'teamraiser',
+	  callback: getTeamraisersByDistanceCallback,
+	  data: 'method=getTeamraisersByDistance&starting_postal=' + whatZip + '&search_distance=' + whatDistance + '&list_sort_column=distance&response_format=json&event_type=Tour%20de%20Cure&list_page_size=1000'
+	});
+	
+}
+
+window.getTeamraisersByDistanceCallback = {
+        error: function(data) {
+            jQTC('#loadingSearchedEvt').hide();
+            jQTC('#teamraiser-event-search-errors').remove();
+            jQTC('#teamraiser-event-search-results').html('');
+
+            jQTC('.teamraiser-event-search-form').prepend('<div id="teamraiser-event-search-errors">' +
+                '<div class="alert alert-danger">' +
+                data.errorResponse.message +
+                '</div>' +
+                '</div>');			
+        },
+        success: function(data) {
+			jQTC('#loadingSearchedEvt').hide();
+
+         	jQTC('#introTxt').html('<p>The following are nearby event within found within <b></b> miles of <b></b>:');
+            jQTC('#teamraiser-event-search-errors').remove();
+            jQTC('#teamraiser-event-search-results').html('');
+
+            if (data.getTeamraisersResponse.totalNumberResults == 0) {
+                jQTC('.teamraiser-event-search-form').prepend('<div id="teamraiser-event-search-errors">' +
+                    '<div class="alert alert-danger">' +
+                    'No nearby events found within <b></b> miles of <b></b>. Please try another search.' +
+                    '</div>' +
+                    '</div>');
+            } else {
+                jQTC('#teamraiser-event-search-results').html('<div class="well"></div>');
+                var teamraiserList = luminateExtend.utils.ensureArray(data.getTeamraisersResponse.teamraiser);
+                jQTC.each(teamraiserList, function() {
+					var evtDate = this.event_date;
+					var edCutOffPos = evtDate.indexOf("T");	
+				
+					var trDate=evtDate.split('T')[0];
+					var trMonth=Number(trDate.split('-')[1])-1;
+					var trMonthdgt = trMonth;
+					var trDay=trDate.split('-')[2];
+					if(trDay<10){
+						trDay=trDay.replace('0','');
+					}
+					var trYear=trDate.split('-')[0];
+					var dtToday = new Date();
+					var evtDateVal = new Date();
+					evtDateVal.setFullYear(trYear,trMonthdgt,trDay);	
+					
+					if(evtDateVal > dtToday){						
+                    	jQTC('#teamraiser-event-search-results .well').append('<div class="teamraiser-event-search-row">' + '<div class="tr_search_left"><p><a href="' + this.greeting_url + '" target="_parent"><strong>' + this.name + '</strong></a></p><p>' + this.city + ', ' + this.state + ' <a href="' + this.greeting_url + '" target="_parent"><img src="../ws/so/so2015/img/mapIt.jpg" border="0" /></a><br />' + luminateExtend.utils.simpleDateFormat(this.event_date, 'MMMM d, yyyy') + '</p></div>' + '<div class="tr_search_right"><a class="red-btn-small" href="' + this.greeting_url + '" target="_parent">Register</a></div><div class="clearDiv">&nbsp;</div> ' + '</div><div style="clear:both;height:15px;">&nbsp;</div>');						 
+					} else {						
+						jQTC('#teamraiser-event-search-results .well').append('<div class="teamraiser-event-search-row">' + '<div class="tr_search_left"><p><a href="' + this.greeting_url + '" target="_parent"><strong>' + this.name + '</strong></a></p><p>' + this.city + ', ' + this.state + ' <a href="' + this.greeting_url + '" target="_parent"><img src="../ws/so/so2015/img/mapIt.jpg" border="0" /></a><br />' + luminateExtend.utils.simpleDateFormat(this.event_date, 'MMMM d, yyyy') + '</p></div>' + '<div class="tr_search_right"><a class="red-btn-small" href="' + this.greeting_url + '" target="_parent">View Detail</a></div><div class="clearDiv">&nbsp;</div> ' + '</div><div style="clear:both;height:15px;">&nbsp;</div>');						
+					}
+					//initialize googlemap
+					initializeGmap();
+					//render marker on Map
+					var theAddress=this.name+','+this.city+' '+this.state;
+					var theGreeting=this.greeting_url;
+					var theTitle=this.name+' - '+this.city+','+this.state;
+					codeAddress(theAddress,theGreeting,theTitle);
+                });
+            } 			          
+        }
+}
+
+//Get URL Parameter
+function getURLParameter(name) {
+        return decodeURI(
+            (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1]
+        );
+}
+
+function initializeGmap(){
+	geocoder = new google.maps.Geocoder();        
+        var mapOptions = {
+          zoom: 5,
+          center:new google.maps.LatLng(-34.397, 150.644),
+          mapTypeId: google.maps.MapTypeId.TERRAIN		 
+        };
+        map = new google.maps.Map(document.getElementById('search_result_map'), mapOptions);
+}
+
+function codeAddress(address,greeting,title) {			
+
+        geocoder.geocode( { 'address': address}, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+            map.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+                map: map,
+                position: results[0].geometry.location,
+				title:title
+            });
+			//Add marker
+			var infowindow = new google.maps.InfoWindow({
+                content: '<p style="padding:0;margin:0 0 5px;">'+title+'</p><p style="padding:0;margin:0 0 5px;"><a href="'+greeting+'" target="_parent">Find out more about this event.</a></p>'
+            });
+			
+            google.maps.event.addListener(marker, 'click', function() {
+               infowindow.open(map,marker);
+            });
+          } else {
+			              
+          }
+        });
+}
+
+function mobileMenuHandler(){
+jQTC('.primaryMNav').click(function(){
+	jQTC('.subMNav').hide();
+	jQTC(this).next('.subMNav').show();
+});
+}
+
+function renderPromo(updatePromoID){
+jQTC('.promoTeaser').show();
+jQTC('.promoMsg').hide();
+jQTC('#promoTeaser'+updatePromoID).hide();
+jQTC('#promoMessage'+updatePromoID).show();
+switch(updatePromoID){
+case 1:
+jQTC('#promo1').css({'top':'10px','left':'10px','background-image':'url(../ws/tr/tr2016/img/promo1d.jpg)'});
+jQTC('#promo'+updatePromoID).switchClass('thumbPromo','activePromoLeft',500,'easeInOutQuad');
+jQTC('#promo2').css({'top':'10px','left':'615px','background-image':'url(../ws/tr/tr2016/img/promo2e.jpg)'});
+jQTC('#promo3').css({'top':'173px','left':'615px','background-image':'url(../ws/tr/tr2016/img/promo3e.jpg)'});
+jQTC('#promo4').css({'top':'10px','left':'800px','background-image':'url(../ws/tr/tr2016/img/promo4e.jpg)'});
+jQTC('#promo5').css({'top':'173px','left':'800px','background-image':'url(../ws/tr/tr2016/img/promo5e.jpg)'});
+break;
+case 2:
+jQTC('#promo2').css({'top':'10px','left':'10px','background-image':'url(../ws/tr/tr2016/img/promo2d.jpg)'});
+jQTC('#promo'+updatePromoID).switchClass('thumbPromo','activePromoLeft',500,'easeInOutQuad');
+jQTC('#promo1').css({'top':'10px','left':'615px','background-image':'url(../ws/tr/tr2016/img/promo1e.jpg)'});
+jQTC('#promo3').css({'top':'173px','left':'615px','background-image':'url(../ws/tr/tr2016/img/promo3e.jpg)'});
+jQTC('#promo4').css({'top':'10px','left':'800px','background-image':'url(../ws/tr/tr2016/img/promo4e.jpg)'});
+jQTC('#promo5').css({'top':'173px','left':'800px','background-image':'url(../ws/tr/tr2016/img/promo5e.jpg)'});
+break;
+case 3:
+jQTC('#promo3').css({'top':'10px','left':'195px','background-image':'url(../ws/tr/tr2016/img/promo3d.jpg)'});
+jQTC('#promo'+updatePromoID).switchClass('thumbPromo','activePromoMiddle',500,'easeInOutQuad');
+jQTC('#promo1').css({'top':'10px','left':'10px','background-image':'url(../ws/tr/tr2016/img/promo1e.jpg)'});
+jQTC('#promo2').css({'top':'173px','left':'10px','background-image':'url(../ws/tr/tr2016/img/promo2e.jpg)'});
+jQTC('#promo4').css({'top':'10px','left':'800px','background-image':'url(../ws/tr/tr2016/img/promo4e.jpg)'});
+
+jQTC('#promo5').css({'top':'173px','left':'800px','background-image':'url(../ws/tr/tr2016/img/promo5e.jpg)'});
+break;
+case 4:
+jQTC('#promo4').css({'top':'10px','left':'385px','background-image':'url(../ws/tr/tr2016/img/promo4d.jpg)'});
+jQTC('#promo'+updatePromoID).switchClass('thumbPromo','activePromoRight',500,'easeInOutQuad');
+jQTC('#promo1').css({'top':'10px','left':'10px','background-image':'url(../ws/tr/tr2016/img/promo1e.jpg)'});
+jQTC('#promo2').css({'top':'173px','left':'10px','background-image':'url(../ws/tr/tr2016/img/promo2e.jpg)'});
+jQTC('#promo3').css({'top':'10px','left':'195px','background-image':'url(../ws/tr/tr2016/img/promo3e.jpg)'});
+jQTC('#promo5').css({'top':'173px','left':'195px','background-image':'url(../ws/tr/tr2016/img/promo5e.jpg)'});
+break;
+case 5:
+jQTC('#promo5').css({'top':'10px','left':'385px','background-image':'url(../ws/tr/tr2016/img/promo5d.jpg)'});
+jQTC('#promo'+updatePromoID).switchClass('thumbPromo','activePromoRight',500,'easeInOutQuad');
+jQTC('#promo1').css({'top':'10px','left':'10px','background-image':'url(../ws/tr/tr2016/img/promo1e.jpg)'});
+jQTC('#promo2').css({'top':'173px','left':'10px','background-image':'url(../ws/tr/tr2016/img/promo2e.jpg)'});
+jQTC('#promo3').css({'top':'10px','left':'195px','background-image':'url(../ws/tr/tr2016/img/promo3e.jpg)'});
+jQTC('#promo4').css({'top':'173px','left':'195px','background-image':'url(../ws/tr/tr2016/img/promo4e.jpg)'});
+break;
+}
+}
+
+function bannerRedirect(whichPromo){
+switch(whichPromo){
+case 1:
+window.location.href="http://tour.diabetes.org/site/PageServer?pagename=TC_redrider";
+break;
+case 2:
+window.location.href="http://tour.diabetes.org/site/PageServer?pagename=TC_TopList";
+break;
+case 3:
+window.location.href="http://tour.diabetes.org/site/PageServer?pagename=TC_team_start";
+break;
+case 4:
+//window.location.href="http://tour.diabetes.org/site/PageServer?pagename=TC_DEV_DH&extref=emailreg";
+jQTC.magnificPopup.open({items:{src: '../site/SPageNavigator/TC_Tour_Search_DH?sta=y'},disableOn: 0,type: 'iframe',mainClass: 'mfp-fade',removalDelay: 160,preloader: false,fixedContentPos: false});
+break;
+case 5:
+window.location.href="http://tour.diabetes.org/site/PageServer?pagename=TC_25Year";
+break;	
+}
+}
+
+function clickPromoHandler(){
+jQTC('.promoTeaser').click(function(){
+var prevActivePromo = whichPromoIsActive;
+var getPromoIDRaw = jQTC(this).prop('id');
+var getPromoID = parseInt(getPromoIDRaw.substr(getPromoIDRaw.length-1));
+whichPromoIsActive = getPromoID;
+//resetPreviousActive if different
+	if(whichPromoIsActive != prevActivePromo){
+	var whatActiveClass = jQTC('#promo'+prevActivePromo).attr('class');		//jQTC('#promo'+prevActivePromo).switchClass(whatActiveClass,'thumbPromo','easeInOutQuad');
+	jQTC('#promo'+prevActivePromo).removeClass(whatActiveClass);
+	jQTC('#promo'+prevActivePromo).addClass('thumbPromo');
+	renderPromo(whichPromoIsActive);
+	} else {
+		bannerRedirect(whichPromoIsActive);	
+	}
+
+});
+jQTC('.promoItem').click(function(){
+var prevActivePromo = whichPromoIsActive;
+var getPromoIDRaw = jQTC(this).prop('id');
+var getPromoID = parseInt(getPromoIDRaw.substr(getPromoIDRaw.length-1));
+whichPromoIsActive = getPromoID;
+//resetPreviousActive if different
+	if(whichPromoIsActive != prevActivePromo){
+	var whatActiveClass = jQTC('#promo'+prevActivePromo).attr('class');		//jQTC('#promo'+prevActivePromo).switchClass(whatActiveClass,'thumbPromo','easeInOutQuad');
+	jQTC('#promo'+prevActivePromo).removeClass(whatActiveClass);
+	jQTC('#promo'+prevActivePromo).addClass('thumbPromo');
+	renderPromo(whichPromoIsActive);
+	} 
+
+});
+
+jQTC('.promoMsg').click(function(){
+	bannerRedirect(whichPromoIsActive);		
+});
+
+//mobile promo click handler
+jQTC('#promoSlider1').css('cursor','pointer');
+jQTC('#promoSlider2').css('cursor','pointer');
+jQTC('#promoSlider3').css('cursor','pointer');
+jQTC('#promoSlider4').css('cursor','pointer');
+jQTC('#promoSlider5').css('cursor','pointer');
+
+jQTC('#promoSlider1').click(function(){
+	bannerRedirect(1);		
+});
+jQTC('#promoSlider2').click(function(){
+	bannerRedirect(2);		
+});
+jQTC('#promoSlider3').click(function(){
+	bannerRedirect(3);		
+});
+jQTC('#promoSlider4').click(function(){
+	bannerRedirect(4);		
+});
+jQTC('#promoSlider5').click(function(){
+	bannerRedirect(5);		
+});
+
+}
+
+//perform login via AJAX request
+function login(whatForm) {
+            luminateExtend.api.request({
+                api: 'CRConsAPI',
+                callback: loginCallback,
+                data: 'method=login',
+                form: whatForm,
+                requestType: 'POST',
+                useHTTPS: true
+            });
+}
+//callback function after login
+function loginCallback(data) {
+            if (data.errorResponse) {
+                alert("Invalid login");
+            } else if (data.loginResponse) {
+                location.reload();			
+				//window.location.href="https://donations.diabetes.org/site/SPageServer?pagename=TC_ridecenter";
+            }
+}
+//your walk center
+function getMyRegisteredEvents(){
+luminateExtend.api.request({
+	api: 'teamraiser', 
+	callback: getMyRegisteredTR, 
+	data: 'method=getRegisteredTeamraisers&cons_id=&response_format=json&event_type=Tour%20de%20Cure'
+}); 	
+}
+window.getMyRegisteredTR = {	  
+      error: function(data) {		
+        jQTC('#teamraiser-registered-event-errors').remove();
+        jQTC('#teamraiser-registered-event-results').html('');
+		jQTC('#loadingRegisteredEvt').hide();
+        
+        /*jQTC('.teamraiser-registered-event-form').prepend('<div id="teamraiser-registered-event-errors">' + 
+                                                     '<div class="alert alert-danger">' + 
+                                                       data.errorResponse.message + 
+                                                     '</div>' + 
+                                                   '</div>');*/
+		jQTC('.teamraiser-registered-event-form').prepend('<div id="teamraiser-registered-event-errors">' + 
+                                                       '<div class="alert alert-danger">' + 
+                                                         '<p>You may have not currently registered in any current event yet. Let\'s <a href="javascript:void(0);" onclick="jQTC.magnificPopup.open({items:{src: \'https://donations.diabetes.org/site/SPageNavigator/TC_Tour_Search_DH?sta=y\'},disableOn: 0,type: \'iframe\',mainClass: \'mfp-fade\',removalDelay: 160,preloader: false,fixedContentPos: false});">find a tour nearby you</a>.</p>' + 
+                                                       '</div>' + 
+                                                     '</div>');
+      }, 
+      success: function(data) {		
+        jQTC('#teamraiser-registered-event-errors').remove();
+        jQTC('#teamraiser-registered-event-results').html('');
+        jQTC('#loadingRegisteredEvt').hide();
+
+        if(data.getRegisteredTeamraisersResponse.totalNumberResults == 0) {
+          jQTC('.teamraiser-registered-event-form').prepend('<div id="teamraiser-registered-event-errors">' + 
+                                                       '<div class="alert alert-danger">' + 
+                                                         '<p>You may have not currently registered in any current event yet. Let\'s <a href="javascript:void(0);" onclick="jQTC.magnificPopup.open({items:{src: \'https://donations.diabetes.org/site/SPageNavigator/TC_Tour_Search_DH?sta=y\'},disableOn: 0,type: \'iframe\',mainClass: \'mfp-fade\',removalDelay: 160,preloader: false,fixedContentPos: false});">find a tour nearby you</a>.</p>' + 
+                                                       '</div>' + 
+                                                     '</div>');
+        }
+        else {
+          jQTC('#teamraiser-registered-event-results').html('<div class="well"></div>');
+          var teamraiserList = luminateExtend.utils.ensureArray(data.getRegisteredTeamraisersResponse.teamraiser);
+		  var activeEvtCount = 0;
+          jQTC.each(teamraiserList, function() {
+			if((this.status === '1')||(this.status === '2')||(this.status === '3')){			
+            jQTC('#teamraiser-registered-event-results .well').append('<div class="teamraiser-registered-event-row">' + 
+                                                           '<h4><a href="' + this.greeting_url + '"><strong>' + this.name + '</strong></a><h4><p>' + this.city + ', ' + this.state + '<br />'+ luminateExtend.utils.simpleDateFormat(this.event_date, 'MMMM d, yyyy') + '</p>' + 
+                                                           '<p><a class="red-btn-small" href="TRC?pg=center&fr_id=' + this.id + '">Visit Your Center</a> ' +                                                           '</div><div style="clear:both;height:15px;">&nbsp;</div>');
+			activeEvtCount++;											
+			}
+          });
+		  if(activeEvtCount == 0){
+			  jQTC('.teamraiser-registered-event-form').prepend('<div id="teamraiser-registered-event-errors">' + 
+                                                       '<div class="alert alert-danger">' + 
+                                                         'You have not registered in any current event yet.' + 
+                                                       '</div>' + 
+                                                     '</div>');
+		  } else {
+			  jQTC('#teamraiser-registered-event-results').prepend('<p>You are currently registered for the following event(s):</p>');
+		  }
+        }
+      }
+}
+
+//Get Internet Explorer Version 7 - 11
+function getInternetExplorerVersion() {
+        var rv = -1; // Return value assumes failure.
+        var isIE11 = !!navigator.userAgent.match(/Trident.*rv[ :]*11\./);
+        if (navigator.appName == 'Microsoft Internet Explorer') {
+            var ua = navigator.userAgent;
+            var re = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+            var re2 = new RegExp("MSIE ([10]{1,}[\.10]{0,})");
+            if (re.exec(ua) != null) {
+                rv = parseFloat(RegExp.$1);
+            } else if (re2.exec(ua) != null) {
+                rv = parseFloat(RegExp.$1);
+            }
+        }
+        if (isIE11) {
+            rv = 11;
+        }
+        return rv;
+}
+//equal height function
+var equalheight = function(container){
+var currentTallest = 0,
+     currentRowStart = 0,
+     rowDivs = [],
+     $el,
+     topPosition = 0;
+ jQTC(container).each(function() {
+
+   $el = jQTC(this);
+   jQTC($el).height('auto')
+   topPostion = $el.position().top;
+
+   if (currentRowStart != topPostion) {
+     for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+       rowDivs[currentDiv].height(currentTallest);
+     }
+     rowDivs.length = 0; // empty the array
+     currentRowStart = topPostion;
+     currentTallest = $el.height();
+     rowDivs.push($el);
+   } else {
+     rowDivs.push($el);
+     currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+
+  }
+   for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+     rowDivs[currentDiv].height(currentTallest);
+   }
+ });
+};
+
+function isOdd(num) { return num % 2;}
+//function thermo
+function renderThermo(){
+		
+		
+		
+		
+		
+		
+		
+		
+		if (goal != "$0.00") {
+			var goalInt = formatDollarAmout(goal);
+		} else {
+			var goalInt = 0;
+		}
+		jQTC('#evtGoal').text(goal);
+		
+		
+		
+		
+			
+		
+		
+		
+		
+		
+		if (raised != "$0.00") {
+			var raisedInt = formatDollarAmout(raised);
+		} else {
+			var raisedInt = 0;
+		}
+		jQTC('#evtRaised').text(raised);
+		
+		
+		// set raised below to debug
+		//raised = 50000;
+		if (goalInt==0 || raisedInt==0) {
+			var progress = 0;
+		} else if (raisedInt >= goalInt) {
+			var progress = -1;
+		} else {
+			var progress = Math.ceil((raisedInt/goalInt)*100);
+		}
+		if(progress != -1){
+		jQTC('#pctValue').text(progress+'%');
+		} else {
+		jQTC('#pctValue').hide();	
+		}
+
+		if (progress == -1) { // goal surpassed
+			jQTC('#thermometer-progress-fill').hide();
+			jQTC('#custom-thermometer').css('width', '405');
+			jQTC('#custom-thermometer').css('height', '70');
+			
+			
+			jQTC('#progress-arrow').css('margin-left', '92.6%'); // red arrow (92.6 = end of thermometer)
+		} else { // goal not met
+			if(progress==0) {
+				var red_arrow_pct = "0%";
+			} else {
+				var red_arrow_pct = (progress-1)+"%"; // offset red arrow margin by 1% less to line up properly
+			}
+			var progress_pct = progress+"%";
+			jQTC('#progress-arrow').css('margin-left', red_arrow_pct); // red arrow
+			// animate thermometer fill
+			jQTC('#thermometer-progress-fill').animate({
+				width: progress_pct
+			}, 3500);
+		}
+	//Thermo Toggle based on PC2 user preference
+	
+}
+function formatDollarAmout(a) {
+		var parsed = a.split("$");
+		var amount = Math.floor(parsed[1].replace(/\,/g,'')); 
+		return parseInt(amount);
+}
+
+//Find Event
+function getAllEvents(){
+		luminateExtend.api.request({
+            api: 'teamraiser',
+            callback: getAllTeamraisersCallback,
+            data: 'method=getTeamraisersByInfo&response_format=json&event_type=Tour%20de%20Cure&country=United%20States&list_page_size=1000&list_page_offset=0&list_sort_column=event_date&list_ascending=false'
+
+        });
+}	
+window.getAllTeamraisersCallback = {
+        error: function(data) {            
+            jQTC('#results-event-search-errors').remove();
+            jQTC('#results-event-search-results').html('');
+
+            jQTC('.results-event-search-form').prepend('<div id="results-event-search-errors">' +
+                '<div class="alert alert-danger">' +
+                data.errorResponse.message +
+                '</div>' +
+                '</div>');			
+        },
+        success: function(data) {            
+            jQTC('#results-event-search-errors').remove();
+            jQTC('#results-event-search-results').html('');
+
+            if (data.getTeamraisersResponse.totalNumberResults == 0) {
+				jQTC('.results-all-event-search-form').prepend('<div id="results-all-event-search-errors">' +
+                    '<div class="alert alert-danger">' +
+                    'No events found.' +
+
+                    '</div>' +
+                    '</div>');
+            } else {				
+                jQTC('#results-all-event-search-results').html('<div class="well"></div>');
+                var teamraiserList = luminateExtend.utils.ensureArray(data.getTeamraisersResponse.teamraiser);
+                jQTC.each(teamraiserList, function() {
+					
+					var evtDate = this.event_date;
+					var edCutOffPos = evtDate.indexOf("T");	
+				
+					var trDate=evtDate.split('T')[0];
+					var trMonth=Number(trDate.split('-')[1])-1;
+					var trMonthdgt = trMonth;
+					var trDay=trDate.split('-')[2];
+					if(trDay<10){
+						trDay=trDay.replace('0','');
+					}
+					var trYear=trDate.split('-')[0];
+					var dtToday = new Date();
+					var evtDateVal = new Date();
+					evtDateVal.setFullYear(trYear,trMonthdgt,trDay);	
+					
+					if(evtDateVal > dtToday){
+                    jQTC('#results-all-event-search-results .well').append('<div class="results-all-event-search-row">' + '<div class="tr_search_left"><p><a href="' + this.greeting_url + '"><strong>' + this.name + '</strong></a></p><p>' + this.city + ', ' + this.state + '<br />' + luminateExtend.utils.simpleDateFormat(this.event_date, 'MMMM d, yyyy') + '</p></div>' + '<div class="tr_search_right"><a class="red-btn-small" href="' + this.greeting_url + '">Register</a></div><div class="clearDiv">&nbsp;</div> ' + '</div><div style="clear:both;height:15px;">&nbsp;</div>');
+					} else {
+						 jQTC('#results-all-event-search-results .well').append('<div class="results-all-event-search-row">' + '<div class="tr_search_left"><p><a href="' + this.greeting_url + '"><strong>' + this.name + '</strong></a></p><p>' + this.city + ', ' + this.state + '<br />' + luminateExtend.utils.simpleDateFormat(this.event_date, 'MMMM d, yyyy') + '</p></div>' + '<div class="tr_search_right"><a class="red-btn-small" href="' + this.greeting_url + '">View Detail</a></div><div class="clearDiv">&nbsp;</div> ' + '</div><div style="clear:both;height:15px;">&nbsp;</div>');
+					}
+				});
+            }            
+        }
+}
+
+//function customizeReg
+function customizeReg(){
+	//jQTC('.campaign-banner-container').css({'font-size':'30px','color':'#C41230'});
+	jQTC('.campaign-banner-container').hide();
+	jQTC('#title_container').css({'display':'block','color':'#FFF'});			
+
+	jQTC('#fr_html_container').css('display','block');
+	//register form team
+	jQTC('select#fr_division_name').show();
+	jQTC('label[for="fr_team_name"]').text('My Team Name:');
+	jQTC('label[for="fr_team_membership_goal"]').text('My Goal for Number of Teammates:');	
+	jQTC('#fr_team_member_goal').attr('placeholder','10');
+	jQTC('#fr_team_member_goal').attr('placeholder','10');
+	jQTC('<sup>Suggested Team Member: 10 members</sup><br />').insertAfter('#fr_team_member_goal');
+	jQTC('label[for="fr_team_goal"]').text('My Team Fundraising Goal:');
+	jQTC('<br /><br /><sup><em>For multi-site/multi-departmental teams with an agreement with ADA only.</em></sup><br />').insertAfter('#fr_co_list');
+	//register change order
+	//jQTC('#user_type_login_container').insertBefore('#user_type_new_participant_registration_container');
+	jQTC('#user_type_login_container').insertBefore(jQTC('#user_type_new_participant_registration_container'));
+	jQTC('span#fr_new_user_container').html('New Participant');
+	jQTC('<p>I haven&#8217;t participated in an ADA event before.</p>').insertAfter('span#fr_new_user_container');
+	jQTC('span#fr_returning_user_container').html('Returning Participant');
+	jQTC('<br /><p>Save time! Login first and you can skip many registration questions.</p>').insertAfter('span#fr_returning_user_container');
+	jQTC('#fr_responsive_register_new_participant_container').text('Register');
+	//add 75 anniversary logo
+	jQTC('#user_type_section_body').append('<div class="clearDiv" style="height:20px;">&nbsp;</div><div id="ada75logo" style="margin-top:30px;float:left;"><img src="../ws/so/so2015/img/ADA75.jpg" style="max-width:250px;width:100%;height:auto;" /></div><div id="ada75Text" style="float:left;margin-top:30px;margin-left:10px;max-width:450px;">Thank you for joining the American Diabetes Association in celebrating 75 years of continuous progress working to improve the lives of people with diabetes through research, advocacy, and education</div><div class="clearDiv" style="height:20px;">&nbsp;</div>');
+	//auto select virtual walker when parameter is provided.
+	
+	
+	
+	
+	// cstm shirt price code	
+			var shirt_price='100';		
+			
+			
+}
+
+//abandonment pop
+function APop(){
+	
+	window.onbeforeunload = confirmExit;
+	jQTC('.step-button').click(function(){
+		bypassAP();
+	});
+	jQTC('.progress-bar-step-text-container a').click(function(){
+		bypassAP();
+	});
+    jQTC('.survey-caption-container a').click(function(){
+        bypassAP();
+    });
+	jQTC('#new_team_container').click(function(){
+		bypassAP();
+	});
+	jQTC('#existing_team_container').click(function(){
+		bypassAP();
+	});
+	jQTC('#individual_container').click(function(){
+		bypassAP();
+	});
+    jQTC('.tcnav').click(function(){
+        bypassAP();
+    });
+    jQTC('.list-component-cell-column-team-name a').click(function(){
+        bypassAP();
+    });
+    jQTC('.list-component-cell-column-join-link a').click(function(){
+        bypassAP();
+
+    });
+    jQTC('.list-component-paginator-link-container').click(function(){
+        bypassAP();
+    });
+	
+	jQTC('.cancel-step').click(function(){
+		window.onbeforeunload = confirmExit;
+	});
+}
+function bypassAP(){
+	window.onbeforeunload=null;
+}
+function confirmExit(){
+   jQTC.magnificPopup.open({
+     items:{
+       src:'#appop'           
+     },
+     type:'inline',
+     closeBtnInside:false
+   });
+  return "Stay now for an amazing offer!";
+}
+
+function buildMyNatCompRank(whichCompID){
+	var jsonRankURL = "../ws/tr/tr2016/json/"+whichCompID+".json";
+	
+		var buildTbl = '<br /><h4 style="font-size:11pt;"><strong>Team Ranking on Completed Events</strong></h4><table class="lc_Table table" style="border: none !important;"><tr><th class="lc_Heading" style="padding:3px;" >&nbsp;</th><th class="lc_Heading" style="padding:3px;">Team Name</th><th class="lc_Heading" style="padding:3px;">Event Name</th><th class="lc_Heading" style="padding:3px;">Fundraising Total</th><th class="lc_Heading" style="padding:3px;" >Members</th></tr>';
+	jQTC.getJSON(jsonRankURL, function(data){	
+		var counter=1;
+		var len;
+		var myFtotalSum=0;
+		var myMbrsSum = 0;
+		for (var i=0, len=data.length; i < len; i++) {
+			//console.log(data[i].TeamName);
+			var FtotalToNumber = Number(data[i].Ftotal.replace(/[^0-9\.]+/g,""));
+			var MbrsToNumber = parseInt(data[i].Mbrs);
+			myFtotalSum = myFtotalSum + FtotalToNumber;
+			myMbrsSum = myMbrsSum + MbrsToNumber;
+			//buildTbl +='<tr class="lc_Row0"><td>'+counter+'</td><td>'+data[i].Tname+'</td><td>'+data[i].EvtAlias+'</td><td><p class="righted">'+data[i].Ftotal+'</p></td><td>'+data[i].Mbrs+'</td></tr>';
+			buildTbl +='<tr class="lc_Row0"><td style="padding:0px;">'+counter+'</td><td style="padding:0px;">'+data[i].Tname+'</td><td style="padding:0px;">'+data[i].EvtAlias+'</td><td style="padding:0px;"><p>'+data[i].Ftotal+'</p></td><td style="padding:0px;">'+data[i].Mbrs+'</td></tr>';	
+			counter++;	
+		}	
+		
+		//buildTbl +='<tr class="lc_Row0"><td><strong>Total:</strong></td><td>&nbsp;</td><td>&nbsp;</td><td><p class="righted"><strong>'+currencyFormat(myFtotalSum)+'</strong></p></td><td><strong>'+myMbrsSum+'</strong></td></tr></table>';
+		buildTbl +='<tr class="lc_Row0"><td style="padding:0px;"><strong>Total:</strong></td><td>&nbsp;</td><td>&nbsp;</td><td style="padding:0px;"><p><strong>'+currencyFormat(myFtotalSum)+'</strong></p></td><td style="padding:0px;"><strong>'+myMbrsSum+'</strong></td></tr></table>';
+		jQTC('#topnatcteamresult').html(buildTbl);
+		//hide it for now
+		//jQTC('#topnatcteamresult').hide();
+	});
+}
+function formatNumber (num) {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+}
+function currencyFormat (num) {
+    return "$" + num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+}
+
+function buildMyRank(){
+	
+var jsonRankURL = "../ws/tr/tr2016/json/TC2016_topfundraiser.json";
+var buildTbl = '<table class="lc_Table table" style="border: none !important;"><tr><th class="lc_Heading">&nbsp;</th><th class="lc_Heading">Name</th><th class="lc_Heading">Team</th><th class="lc_Heading">Total Raised</th><th class="lc_Heading">Location</th></tr>';
+jQTC.getJSON(jsonRankURL, function(data){	
+    var counter=1;
+	var len;
+    for (var i=0, len=data.length; i < len; i++) {
+        //console.log(data[i].TeamName);
+		if(i<10){
+				buildTbl +='<tr class="lc_Row0"><td>'+counter+'</td><td>'+data[i].Name+'</td><td>'+data[i].Team+'</td><td><p class="righted">'+data[i].TC+'</p></td><td>'+data[i].Location+'</td></tr>';			
+		} else {			
+				buildTbl +='<tr class="lc_Row0 morectr" style="display:none;"><td>'+counter+'</td><td>'+data[i].Name+'</td><td>'+data[i].Team+'</td><td><p class="righted">'+data[i].TC+'</p></td><td>'+data[i].Location+'</td></tr>';			
+		}	
+		counter++;	
+    }	
+	buildTbl +='</table><p><a href="javascript:void(0);" onClick="toggleCTR(1);" id="ctrToggle">View Top 100 Fundraisers</a></p>';
+	jQTC('#topfundraisercstm').html(buildTbl);
+});
+//top nat 
+var jsonRankURL3 = "../ws/tr/tr2016/json/TC2016_TopNatTeam.json";
+var buildTbl3 = '<table class="lc_Table table" style="border: none !important;"><tr><th class="lc_Heading">&nbsp;</th><th class="lc_Heading">Team</th><th class="lc_Heading">Team Number</th><th class="lc_Heading">Team Riders</th><th class="lc_Heading">Team Raised</th></tr>';
+jQTC.getJSON(jsonRankURL3, function(data3){	
+    var counter3=1;
+	var len3;
+    for (var b=0, len3=data3.length; b < len3; b++) {
+        //console.log(data[i].TeamName);
+		if(b<10){
+				buildTbl3 +='<tr class="lc_Row0"><td>'+counter3+'</td><td>'+data3[b].Team+'</td><td>'+data3[b].TeamNum+'</td><td><p class="righted">'+data3[b].TeamRiders+'</p></td><td>'+data3[b].TeamRaised+'</td></tr>';			
+		} else {			
+				buildTbl3 +='<tr class="lc_Row0 morectr" style="display:none;"><td>'+counter3+'</td><td>'+data3[b].Team+'</td><td>'+data3[b].TeamNum+'</td><td><p class="righted">'+data3[b].TeamRiders+'</p></td><td>'+data3[b].TeamRaised+'</td></tr>';			
+		}	
+		counter3++;	
+    }	
+	buildTbl3 +='</table>';
+	jQTC('#topnattourteamcstm').html(buildTbl3);
+});
+//top multi 
+	var jsonRankURL4 = "../ws/tr/tr2016/json/TC2016_TopMultiTeam.json";
+var buildTbl4 = '<table class="lc_Table table" style="border: none !important;"><tr><th class="lc_Heading">&nbsp;</th><th class="lc_Heading">Team</th><th class="lc_Heading">Team Number</th><th class="lc_Heading">Team Riders</th><th class="lc_Heading">Team Raised</th></tr>';
+jQTC.getJSON(jsonRankURL4, function(data4){	
+    var counter4=1;
+	var len4;
+    for (var c=0, len4=data4.length; c < len4; c++) {
+        //console.log(data[i].TeamName);
+		if(c<10){
+				buildTbl4 +='<tr class="lc_Row0"><td>'+counter4+'</td><td>'+data4[c].Team+'</td><td>'+data4[c].TeamNum+'</td><td><p class="righted">'+data4[c].TeamRiders+'</p></td><td>'+data4[c].TeamRaised+'</td></tr>';			
+		} else {			
+				buildTbl4 +='<tr class="lc_Row0 morectr" style="display:none;"><td>'+counter4+'</td><td>'+data4[c].Team+'</td><td>'+data4[c].TeamNum+'</td><td><p class="righted">'+data4[c].TeamRiders+'</p></td><td>'+data4[c].TeamRaised+'</td></tr>';			
+		}	
+		counter4++;	
+    }	
+	buildTbl4 +='</table>';
+	jQTC('#topnatmultisitecstm').html(buildTbl4);
+});	
+//top single site 
+var jsonRankURL2 = "../ws/tr/tr2016/json/TC2016_TopSingleSiteTeam.json";
+var buildTbl2 = '<table class="lc_Table table" style="border: none !important;"><tr><th class="lc_Heading">&nbsp;</th><th class="lc_Heading">Captain</th><th class="lc_Heading">Team</th><th class="lc_Heading">Members Total</th><th class="lc_Heading">Total Raised</th><th class="lc_Heading">Location</th></tr>'; 
+jQTC.getJSON(jsonRankURL2, function(data2){	
+    var counter2=1;
+	var len2;
+    for (var z=0, len2=data2.length; z < len2; z++) {
+        //console.log(data[i].TeamName);
+
+		if(z<10){
+				buildTbl2 +='<tr class="lc_Row0"><td>'+counter2+'</td><td>'+data2[z].Captain+'</td><td>'+data2[z].Team+'</td><td><p class="righted">'+data2[z].Members+'</p></td><td><p class="righted">'+data2[z].TC+'</p></td><td>'+data2[z].Location+'</td></tr>';			
+		} else {			
+				buildTbl2 +='<tr class="lc_Row0 morectr2" style="display:none;"><td>'+counter2+'</td><td>'+data2[z].Captain+'</td><td>'+data2[z].Team+'</td><td><p class="righted">'+data2[z].Members+'</p></td><td><p class="righted">'+data2[z].TC+'</p></td><td>'+data2[z].Location+'</td></tr>';			
+		}	
+		counter2++;	
+    }	
+	buildTbl2 +='</table><p><a href="javascript:void(0);" onClick="toggleCTR(2);" id="ctrToggle2">View Top 100 National and Multi Site Teams</a></p>';
+	jQTC('#topnatsinglesitecstm').html(buildTbl2);
+});
+}
+function toggleCTR(whichViewMore){
+	switch(whichViewMore){
+		case 1:
+			jQTC('.morectr').toggle();
+			if (jQTC('.morectr').is(":visible")){
+				jQTC('#ctrToggle').text('View Top 10 Fundraisers');	
+			} else {
+				jQTC('#ctrToggle').text('View Top 100 Fundraisers');
+			}
+		break;
+		case 2:
+			jQTC('.morectr2').toggle();
+			if (jQTC('.morectr2').is(":visible")){
+				jQTC('#ctrToggle2').text('View Top 10 National and Multi Site Teams');	
+			} else {
+				jQTC('#ctrToggle2').text('View Top 100 National and Multi Site Teams');
+			}
+		break;
+	}	
+}
+
+//VMS Survey
+ window.VMSSurveyCallback = {
+      error: function(data) {}, 
+      success: function(data) {
+		 window.location = rthanksurl;     
+      }
+    };
+
+//PROTOTYPE API DEV
+function getTeamWithSpecificGoal(){
+	
+luminateExtend.api.request({
+	api: 'teamraiser', 
+	callback: getTeamsAndGoalTR, 
+	data: 'method=getTeamsByInfo&response_format=json&event_type=Tour%20de%20Cure&event_type3=2016&list_page_size=1000&list_sort_column=t.goal'
+}); 	
+}
+window.getTeamsAndGoalTR = {	  
+      error: function(data) {		
+        jQTC('#teamraiser-getTeamGoal-errors').remove();
+        jQTC('#teamraiser-getTeamGoal-results').html('');
+		//jQTC('#loadinggetTeamGoal').hide();
+        
+       
+		jQTC('.teamraiser-getTeamGoal-results').prepend('<div id="teamraiser-getTeamGoal-errors">' + 
+                                                       '<div class="alert alert-danger">' + 
+                                                         '<p>There is an error with performing this API at this moment.</p>' + 
+                                                       '</div>' + 
+                                                     '</div>');
+      }, 
+      success: function(data) {		
+        jQTC('#teamraiser-getTeamGoal-errors').remove();
+        jQTC('#teamraiser-getTeamGoal-results').html('');
+       // jQTC('#loadinggetTeamGoal').hide();
+
+        if(data.getTeamSearchByInfoResponse.totalNumberResults == 0) {
+          jQTC('#teamraiser-getTeamGoal-results').prepend('<div id="teamraiser-getTeamGoal-errors">' + 
+                                                       '<div class="alert alert-danger">' + 
+                                                         '<p>No result found.</p>' + 
+                                                       '</div>' + 
+                                                     '</div>');
+        }
+        else {
+          jQTC('#teamraiser-getTeamGoal-results').html('<div class="well"></div>');
+          var teamList = luminateExtend.utils.ensureArray(data.getTeamSearchByInfoResponse.team);
+		  //var teamListSorted = _.sortBy(teamList,"goal");  
+  		  
+		  var activeEvtCount = 0;
+          //jQTC.each(teamListSorted, function() {
+		  jQTC.each(teamList, function() {
+			var currTeamGoal = parseInt(this.goal)/100;
+			var currTeamGoalString = currTeamGoal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");			
+			if(currTeamGoal >= 500){			
+            jQTC('#teamraiser-getTeamGoal-results .well').append('<div class="teamraiser-getTeamGoal-row">' + 
+                                                           '<h4><a href="'+this.teamPageURL+'" target="_blank">'+ this.name + '</strong></a><h4><p>Team Goal : $' + currTeamGoalString + '</p></div><div style="clear:both;height:15px;">&nbsp;</div>');
+			activeEvtCount++;											
+			}
+          });
+		  if(activeEvtCount == 0){
+			  			 
+			   
+			  jQTC('#teamraiser-getTeamGoal-results').prepend('<div id="teamraiser-getTeamGoal-errors">' + 
+                                                       '<div class="alert alert-danger">' + 
+                                                         'There is no team with goal above or equal to $500.' + 
+                                                       '</div>' + 
+                                                     '</div>');
+		  } else {
+			  	
+			  jQTC('#teamraiser-getTeamGoal-results').prepend('<p>The following listings of team with goal of $500 and greater:</p>');
+		  }
+        }
+      }
+}
+
+function getTCTrainingCalendarEvtDetail(whatEvtID){
+	luminateExtend.api.request({
+	api: 'OrgEvent', 
+	callback: getTCTrainingCalEvt, 
+	data: 'method=getEvent&response_format=json&list_page_size=1000&event_id='+whatEvtID
+	}); 	
+}
+
+window.getTCTrainingCalEvt = {	  
+      error: function(data) {	
+		jQTC('#getTCCalEvt-results').append('<div id="getTCCalEvt-errors">' + 
+                                                       '<div class="alert alert-danger">' + 
+                                                         '<p>There is an error with performing this API at this moment.</p>' + 
+                                                       '</div>' + 
+                                                     '</div>');
+      }, 
+      success: function(data) {	   
+          var TCCalList = luminateExtend.utils.ensureArray(data.getEventResponse.event); 
+		  jQTC.each(TCCalList, function() {
+            jQTC('#getTCCalEvt-results').append('<div class="well"><div class="getTCCalEvt-row"><h4><a href="'+this.eventUrl+'" target="_blank">'+ this.name + '</strong></a><h4><p>Start Date: ' + this.eventDate.startDate + '</p><p>Time: ' +this.eventDate.startTime + ' - ' + this.eventDate.endTime  +'</p><p>Location: ' + this.eventLocation.street1 + ','+this.eventLocation.city+','+ this.eventLocation.stateProv +','+this.eventLocation.zip+'</p></div></div><div style="clear:both;height:15px;">&nbsp;</div>');
+				 });
+        }
+	 
+      
+}
+
+
+
+
+
+
+
+//ANGULAR CONTROLLERS
+    function siteNavMapController($scope) {
+        $scope.sitenavs = [{
+            title: "Home",
+            action: "PageServer?pagename=TC_homepage"
+        }, {
+            title: "Why Ride?",            
+            primary: "yes",
+            menus: [{
+                title: "The Impact of Diabetes",
+                action: "PageServer?pagename=TC_aboutdiabetes"
+            }, {
+                title: "About ADA",
+                action: "PageServer?pagename=TC_aboutada"
+            }, {
+                title: "Are You a Red Rider?",
+                action: "PageServer?pagename=TC_redrider"
+            }, {
+                title: "Frequently Asked Questions",
+                action: "PageServer?pagename=TC_faq"
+            }, {
+                title: "Contact Us",
+                action: "PageServer?pagename=TC_contact",
+				bborder:"yes"
+            }]
+        }, {
+            title: "Explore the Tour",
+            primary: "yes",
+            menus: [{
+                title: "Discover Tour",
+                action: "PageServer?pagename=TC_about",
+				bborder:"yes"
+            }]
+        }, {
+            title: "Team Up!",
+            primary: "yes",
+            menus: [{
+                title: "Start/Join a Team",
+                action: "PageServer/?pagename=TC_team_start"
+            }, {
+                title: "Join Team Red",
+                action: "TR?company_id=12670&pg=national_company"
+            }, {
+                title: "Join a National Team",
+                action: "PageServer?pagename=TC_team_national"
+            }, {
+                title: "Start a National Team",
+                action: "PageServer?pagename=TC_start_national_team"
+            }, {
+                title: "Volunteer",
+                action: "PageServer?pagename=TC_volunteer",
+				bborder:"yes"
+            }]
+        }, {
+            title: "Gear Up for Fundraising",			
+            primary: "yes",
+            menus: [{
+                title: "Your Tour Center",
+                action: "SPageServer?pagename=TC_tourcenter"
+            }, {
+                title: "Easy Fundraising Tips",
+                action: "PageServer?pagename=TC_fundraisingtips"
+            }, {
+                title: "Become a Champion",
+                action: "PageServer?pagename=TC_champions"
+            }, {
+                title: "Matching Gifts",
+                action: "PageServer?pagename=TC_matchinggifts"
+            },  {
+                title: "Thank You Gifts",
+                action: "PageServer?pagename=TC_thankyougifts"
+            }, {
+                title: "Your Dollars at Work",
+                action: "PageServer?pagename=TC_yourdollarsatwork"
+            }, {
+                title: "Get Social",
+                action: "PageServer?pagename=TC_social",
+				bborder:"yes"
+            }]
+        }, {
+            title: "Training Zone",
+            primary: "yes",
+            menus: [{
+                title: "Training Tips",
+                action: "PageServer/?pagename=TC_training"
+            },{
+                title: "Red Rider Training",
+                action: "PageServer/?pagename=TC_RedTraining",
+				bborder:"yes"
+            }]
+        }, {
+            title: "Find a Tour",            
+			primary: "yes",
+            menus: [{
+                title: "Look Up",
+                action: "SPageServer/?pagename=TC_Tour_Search_DH&sta=y",				
+				magpop: "magframebox"
+            },{
+                title: "All Event Listing",
+                action: "SPageServer/?pagename=TC_All_Events",
+				bborder:"yes"
+            }]
+        }]
+    }
+
+function nationalCompaniesController($scope) {
+        $scope.natcompanies = [{
+            ncpid: '12670',
+            ncpname: 'Team Red',
+			colpos:'1'          
+        }, {
+            ncpid: '22000',
+            ncpname: 'ADA Camp National',
+			colpos:'1'          
+        }, {
+            ncpid: '16871',
+            ncpname: 'American Express Healthy Living',
+			colpos:'1'          
+        }, {
+            ncpid: '21933',
+            ncpname: 'AstraZeneca',
+			colpos:'1'          
+        }, {
+            ncpid: '8211',
+            ncpname: 'Team AT&T',
+			colpos:'1'          
+        }, {
+            ncpid: '16190',
+            ncpname: 'Team BD',
+			colpos:'1'          
+        }, {
+            ncpid: '15820',
+            ncpname: 'Team Bio-Rad',
+			colpos:'1'                      
+        }, {
+            ncpid: '18880',
+            ncpname: 'Cardinal Health',
+			colpos:'1'          
+        }, {
+            ncpid: '18900',
+            ncpname: 'Charles Schwab',
+			colpos:'2'          
+        }, {
+            ncpid: '12420',
+            ncpname: 'Team Cisco',
+			colpos:'2'          
+        }, {
+            ncpid: '19261',
+            ncpname: 'Constellation Brands',
+			colpos:'2'          
+        }, {
+            ncpid: '8220',
+            ncpname: 'Dignity Memorial',
+			colpos:'2'          
+        }, {
+            ncpid: '7930',
+            ncpname: 'Gold\'s Gym',
+			colpos:'2'          
+        }, {
+            ncpid: '22650',
+            ncpname: 'Healogics',
+			colpos:'2'          
+        }, {
+            ncpid: '8210',
+            ncpname: 'Johnson & Johnson',
+			colpos:'2'          
+        }, {
+            ncpid: '22661',
+            ncpname: 'Kroger',
+			colpos:'2'          
+        }, {
+            ncpid: '18940',
+            ncpname: 'Team Leidos',
+			colpos:'3'          
+        }, {
+            ncpid: '16960',
+            ncpname: 'Lilly',
+			colpos:'3'          
+        }, {
+            ncpid: '16060',
+            ncpname: 'Lockheed Martin',
+			colpos:'3'          
+        }, {
+            ncpid: '17630',
+            ncpname: 'Novo Nordisk',
+			colpos:'3'          
+        }, {
+            ncpid: '22360',
+            ncpname: 'Sanofi',
+			colpos:'3'          
+        }, {
+            ncpid: '8221',
+            ncpname: 'Velo Valero',
+			colpos:'3'          
+        }, {
+            ncpid: '21520',
+            ncpname: 'Walgreens',
+			colpos:'3'          
+        }, {
+            ncpid: '8770',
+            ncpname: 'Walmart/Sam\'s Club',
+			colpos:'3'          
+        }];
+    }
+
+//Tour Company
+function companiesController($scope){
+	$scope.companies = [
+		{cpid:'12670',cpname:'Team Red'},
+		{cpid:'16871',cpname:'American Express - Healthy Living'},
+		{cpid:'8211',cpname:'AT&T'},
+		{cpid:'16190',cpname:'BD'},
+		{cpid:'15820',cpname:'Bio-Rad'},
+		{cpid:'18880',cpname:'Cardinal Health'},
+		{cpid:'18900',cpname:'Charles Schwab'},
+		{cpid:'12420',cpname:'Cisco'},
+		{cpid:'19261',cpname:'Constellation Brands'},
+		{cpid:'8220',cpname:'Dignity Memorial'},
+		{cpid:'20613',cpname:'Eisai'},
+		{cpid:'7930',cpname:'Gold\'s Gym'},
+        {cpid:'22650',cpname:'Healogics'},
+		{cpid:'8210',cpname:'Johnson & Johnson'},
+		{cpid:'15540',cpname:'KT Cycle Time'},
+		{cpid:'16960',cpname:'Lilly'},
+		{cpid:'16060',cpname:'Lockheed Martin'},
+		{cpid:'17630',cpname:'Novo Nordisk'},
+		{cpid:'8221',cpname:'Velo Valero'},
+		{cpid:'21520',cpname:'Walgreens'},
+		{cpid:'8770',cpname:'Walmart/Sam\'s Club'}
+	];		
+}
+var evtype="Tour%20de%20Cure";
+
+</script>
+
+<!-- SHARE THIS -->
+<script type="text/javascript">var switchTo5x=true;</script>
+
+<!-- sharethis -->
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
+<script type="text/javascript">stLight.options({publisher: "05b7e598-6abd-4fe2-978a-5c98e9e9c04b", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+<script>
+	var options={ "publisher": "05b7e598-6abd-4fe2-978a-5c98e9e9c04b", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["facebook", "twitter", "linkedin", "googleplus", "email", "sharethis"]}};
+	var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+</script>
+
+
+<!-- ANGULARJS IE9 LOWER BOOTSTRAP -->
+<!--[if lte IE 9]>
+<script type="text/javascript">
+    jQTC(document).ready(function() {
+        angular.bootstrap(document);
+        jQTC('.magframebox').magnificPopup({
+                disableOn: 0,
+                type: 'iframe',
+                mainClass: 'mfp-fade',
+                removalDelay: 160,
+                preloader: false,
+                fixedContentPos: false
+        });
+    });
+</script>
+<![endif]-->
+<!-- ANGULARJS IE9 LOWER BOOTSTRAP -->
+
+
+<!-- QUANTCAST -->
+
+
+
+
+
+
+
+<!-- PULSE POINT -->
+
+
+<!-- PULSE POINT -->
+
+<!-- PLOWSHARE -->
+
+
+<!-- BOUNCE ABANDONMENT POPUP INITIATIVE -->
+
+
+
+
+
+</body>
+
+</html>

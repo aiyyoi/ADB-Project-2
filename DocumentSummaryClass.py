@@ -10,114 +10,94 @@ import re
 
 class DocumentSummary:
 
-	def __init__(self,classification,host):
-		self.urlList = []
-		self.fileHash = HashList()
-		self.docFreqDict = {}
-		self.classification = map(lambda x : x.split("/"),classification)
+	def __init__(self,classification,urlDict,host):
 		self.host = host
-                self.bingUrlBase = 'https://api.datamarket.azure.com/Bing/SearchWeb/v1/Composite?'
-                self.bingParams = {'$top': '4', '$format': 'json'}
-                #save your own key as key.json under the save path as this script
-                with open("./key.json") as key_file:
-                        data = json.load(key_file)
-                accountKey = data['accountKey']
-                # authentications
-                accountKeyEnc = base64.b64encode(accountKey + ':' + accountKey)
-                self.headers = {'Authorization': 'Basic ' + accountKeyEnc}
-
+		self.urlDict = urlDict
+		self.urlHash = []	
+		self.docFreqDict = {}
+		self.classification = map(lambda x : list(reversed(x.split("/"))),classification)	
 
 
 	def generateSummaries(self):
-		for c in self.classification:
-			i = 0        
-                        for n in c:
+		for c in self.classification:	
+			if(len(c) > 2):
+				curr_path = c[1:]
+			else:
+				curr_path = c        
+                        for n in curr_path:	
 				if(n in self.docFreqDict.keys()):
 					continue
-				if( i > 2):
-					path = "./rules/" + c[i-1].lower() + ".txt"
-					queries = RulesReader(path).getRules()
-					queries = filter(lambda x : x[0] == n.lower(),queries)
-				else:
-					path = "./rules/" + n.lower() + ".txt"
-					queries = RulesReader(path).getRules()
+			
+				counter = 0	
+				curr_list = self.urlDict[n]
+				x = 0
+				while x < len(curr_list):		
+                                        print(str(x/4+1) + "/" + str(len(curr_list)/4)) 
 
-				docFreqs = {}
-				for q in queries:
-					res = self.search(q[1])
-					docs = self.getDocumentText(res)   
-                                        for d in docs:
-                                                for w in d:
-							temp = docFreqs.keys()
-                                                        if(w in temp):
-                                                                docFreqs[w] += 1
-                                                        else:
-                                                                docFreqs[w] = 1
-							p = 0
-							while p < i:
-								if(w in self.docFreqDict[c[p]].keys()):
-									self.docFreqDict[c[p]][w] += docFreqs[w]
-								else:
-									self.docFreqDict[c[p]][w] = docFreqs[w]
-								p += 1
-
-                                self.docFreqDict[n] = docFreqs
-                		i += 1
-
-		for k in self.docFreqDict.keys():
-				f = open(k.capitalize() + "-" + self.host, 'w')
-				for w in sorted(self.docFreqDict[k]):
-					f.write(w + "#" + str(self.docFreqDict[k][w]) + "\n")
+					if(x + 4  > len(curr_list)):	
+						docs = self.getDocumentText(curr_list[x:len(curr_list)])
+					else:
+						docs = self.getDocumentText(curr_list[x:x+4]) 
+					x += 4
+                                	
+					for d in docs:
+                                		for w in d:	
+							temp = self.docFreqDict.keys()
+                                                	if(w in temp):
+                                                		self.docFreqDict[w] += 1
+               	                                	else:
+                                                        	self.docFreqDict[w] = 1
+		
+				f = open(n.capitalize() + "-" + self.host + ".txt", 'w')
+				for w in sorted(self.docFreqDict.keys()):
+					f.write(w + "#" + str(self.docFreqDict[w]) + "\n")
 				f.close()
 
-
-
-	def search(self,query_string):
-		self.bingParams['Query'] = "'site:"+self.host+" "+query_string+"'" 
-	        bingUrl = self.bingUrlBase+urllib.urlencode(self.bingParams)
-                #wait
-                #time.sleep(1)
-		print(bingUrl)
-                req = urllib2.Request(bingUrl, headers = self.headers)
-                response = urllib2.urlopen(req)
-                content = json.loads(response.read())['d']['results'][0]['Web']
-		content = map(lambda x : str(x['Url']), content)
-		return content
 
 	
 	def getDocumentText(self,url_list):
 		docs = []
 		for u in url_list:
-			if(u in self.urlList):
+			if(u in self.urlHash or u.split('.')[-1] == "pdf" or u.split('.')[-1] == "ppt"):
 				continue
 			else:
-				self.urlList.append(u)
+				self.urlHash.append(u)
 			try:
+				print(u)
 				doc_dump = subprocess.check_output("lynx --dump " + u, shell=True)		
 			except Exception, e:
 				pass	
 			index = doc_dump.find("\nReferences\n")
-			doc_dump = doc_dump[:index].lower()
-			doc_dump = re.sub(r'\[.*?\]',r'',doc_dump)
-
-			final_text = ''			
-			for i in range(0,len(doc_dump)):
-				char = doc_dump[i]
-				if(char.isalpha() and ord(char) < 128):
-					final_text += char.lower()
+			final_text = ''	
+			recording = True 
+			wrotespace = True
+			
+			for i in range(0,index):
+				if(recording):
+					if(doc_dump[i] == '['):
+						recording = False
+						if(not wrotespace):
+							final_text += ' '
+							wrotespace = True
+						continue
+					else:
+						if(doc_dump[i].isalpha() and ord(doc_dump[i]) < 128):
+							final_text += doc_dump[i].lower()
+							wrotespace = False
+						else:
+							if(not wrotespace):
+								final_text += ' '
+								wrotespace = True
 				else:
-					final_text += ' '
-	
-			#if(not self.fileHash.isDuplicate(final_text)):		
+					if(doc_dump[i] == ']'):
+						recording = True
+						continue
+
+
 			final_text = set(final_text.split())
 			docs.append(final_text)
 		
 		return docs
 
 
-
-# c = DocumentSummary(["Root"],"diabetes.org")
-# #d = c.getDocumentText(c.search("pancreas"))
-# #print(len(d))
-# c.generateSummaries()
 
