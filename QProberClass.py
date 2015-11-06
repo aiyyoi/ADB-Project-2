@@ -48,6 +48,9 @@ class QProber:
 		tDocCts = 0 # total number of document counts
 		for eachCat in categoryCts.keys():
 			tDocCts += categoryCts[eachCat]
+		if tDocCts == 0:
+			raise ValueError ('Cannnot retrieve any document from database, program exiting ...')
+			exit()
 		#check against with predefined spec and cov
 		# start at root level
 		for eachCat in categoryCts.keys():
