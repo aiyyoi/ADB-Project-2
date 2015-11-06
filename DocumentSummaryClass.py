@@ -30,10 +30,10 @@ class DocumentSummary:
 			
 				counter = 0	
 				curr_list = self.urlDict[n]
-				print '\nSampling and Summary for '+n+' with '+str(len(curr_list))+ ' URL:\n'
+				print '\nParsing and Summarizing for '+n+' with '+str(len(curr_list))+ ' URL:\n'
 				x = 0
 				while x < len(curr_list):
-					print(str(x/4+1) + "/" + str(len(curr_list)/4)) 
+					#print(str(x/4+1) + "/" + str(len(curr_list)/4)) 
 
 					if(x + 4  > len(curr_list)):	
 						docs = self.getDocumentText(curr_list[x:len(curr_list)])

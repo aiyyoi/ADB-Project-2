@@ -9,17 +9,14 @@ import argparse
 import QProberClass
 import DocumentSummaryClass
 
-#################### New Search and Classification Session #################################
+#################### New Classification, Sampling and Summary Session #################################
 parser = argparse.ArgumentParser(prog='ADB Project 2', description = 'how to use the script')
 parser.add_argument('-host', help = 'URL to the database to be classified', required = True)
-#queries will be read from rule files
-#parser.add_argument('-q', help = 'Single quoted search query', required = True)
 parser.add_argument('-spec', help = 'Specificity threshold', required = True)
 parser.add_argument('-cov', help = 'Coverage threshold', required = True)
 args = parser.parse_args()
 
 site = args.host
-#query = args.q
 tSpecificity = args.spec
 tCoverage = args.cov
 

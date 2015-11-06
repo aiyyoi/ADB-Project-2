@@ -49,12 +49,14 @@ class QProber:
 		for eachCat in categoryCts.keys():
 			tDocCts += categoryCts[eachCat]
 		#check against with predefined spec and cov
+		# start at root level
 		for eachCat in categoryCts.keys():
 			cCov = categoryCts[eachCat]
 			cSpec = float(categoryCts[eachCat])/tDocCts
 			print 'Database has Coverage '+str(cCov)+' with Specificity '+ str(cSpec)+ ' in Category '+eachCat
 			if (cSpec >= float(self.tSpec) and cCov >= int(self.tCov)):
 				if (eachCat != 'Health' and eachCat!='Computers' and eachCat!='Sports'):
+					# at leaf level category
 					for i in range(0, len(supCat)):
 						if parent in supCat[i]:
 							if len(supCat[i].split('/')) == 2:
@@ -63,6 +65,7 @@ class QProber:
 								supCat.append('Root/'+parent+'/'+eachCat)
 
 				else:
+					# at second level category
 					if len(supCat[0].split('/')) == 1:
 						supCat[0] = supCat[0]+'/'+eachCat
 					else:
