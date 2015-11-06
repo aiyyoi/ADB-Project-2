@@ -1,6 +1,6 @@
 '''
 	Main business logic implementation 
-	For ADB Project2 part 1
+	For ADB Project2
 	Reads in API key, parse inputs
 	Delegate to suitable classes for analysis
 '''
@@ -36,7 +36,6 @@ for each in category:
 
 
 # to summarize database
-## TEST
 c = DocumentSummaryClass.DocumentSummary(category,urlSet,site)
 c.generateSummaries()
 

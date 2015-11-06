@@ -23,16 +23,17 @@ class DocumentSummary:
 			if(len(c) > 2):
 				curr_path = c[1:]
 			else:
-				curr_path = c        
-                        for n in curr_path:	
+				curr_path = c
+			for n in curr_path:	
 				if(n in self.docFreqDict.keys()):
 					continue
 			
 				counter = 0	
 				curr_list = self.urlDict[n]
+				print '\nSampling and Summary for '+n+' with '+str(len(curr_list))+ ' URL:\n'
 				x = 0
-				while x < len(curr_list):		
-                                        print(str(x/4+1) + "/" + str(len(curr_list)/4)) 
+				while x < len(curr_list):
+					print(str(x/4+1) + "/" + str(len(curr_list)/4)) 
 
 					if(x + 4  > len(curr_list)):	
 						docs = self.getDocumentText(curr_list[x:len(curr_list)])
@@ -41,12 +42,12 @@ class DocumentSummary:
 					x += 4
                                 	
 					for d in docs:
-                                		for w in d:	
+						for w in d:	
 							temp = self.docFreqDict.keys()
-                                                	if(w in temp):
-                                                		self.docFreqDict[w] += 1
-               	                                	else:
-                                                        	self.docFreqDict[w] = 1
+							if(w in temp):
+								self.docFreqDict[w] += 1
+							else:
+								self.docFreqDict[w] = 1
 		
 				f = open(n.capitalize() + "-" + self.host + ".txt", 'w')
 				for w in sorted(self.docFreqDict.keys()):
@@ -70,7 +71,7 @@ class DocumentSummary:
 			index = doc_dump.find("\nReferences\n")
 			final_text = ''	
 			recording = True 
-			wrotespace = True
+			wrotespace = False#True
 			
 			for i in range(0,index):
 				if(recording):
