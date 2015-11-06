@@ -15,22 +15,29 @@ Akshaan Kakar, UNI: ak3808
 <pre><code>
 Xuejuns-MacBook-Pro:ADB-Project-2 AmyWang$ tree
 .
-├── DocumentSummaryClass.py
-├── DocumentSummaryClass.pyc
-├── HashListClass.py
-├── HashListClass.pyc
+├── key.json
+├── rules
+│   ├── computers.txt
+│   ├── root.txt
+│   ├── health.txt
+│   └── sports.txt
+├── RulesReaderClass.py
 ├── MainScript.py
 ├── QProberClass.py
+├── DocumentSummaryClass.py
+├── DocumentSummaryClass.pyc
 ├── QProberClass.pyc
-├── README.md
-├── RulesReaderClass.py
 ├── RulesReaderClass.pyc
-├── key.json
-└── rules
-    ├── computers.txt
-    ├── health.txt
-    ├── root.txt
-    └── sports.txt
+├── Root-fifa.com.txt
+├── Root-hardwarecentral.com.txt
+├── Root-health.com.txt
+├── Root-yahoo.com.txt
+├── Root-diabetes.org.txt
+├── Health-diabetes.org.txt
+├── Health-health.com.txt
+├── Computers-hardwarecentral.com.txt
+├── Sports-fifa.com.txt
+└── README.md
 </code></pre>
 
 ### Compile/ Run Instructions
@@ -95,8 +102,6 @@ rules =
 ]
 </code></pre>
 
-**HashListClass** : To be written
-
 ######Important Remark:
 The query probling and sampling processes are done side by side in **QProberClass** to avoid unnecessary access to Bing Search API twice at two different steps, so as to save execution time even when caching is not implemented.
 
@@ -104,7 +109,7 @@ The query probling and sampling processes are done side by side in **QProberClas
 
 ## Benchmark Test 
 ######Against Reference Implementation
-In order to check the correctness of the results, we used the document frequency values in the reference results for each test case and checked for concordance with the results from our implementation. The results were not identical and the reference results showed a larger number of terms (due to incoherent strings)  as we expected, since our implementation only considers HTML files int he summarization step and ignore PDF, PPT and other non-text formats. For most of the coherent text strings, we found an exact agreement between the document frequency values in the reference results and our results. For some high term-frequency terms such as 'a', 'if' and 'the', we found a slight disagreement (+/- 5) between the document frequencies for these terms in the two implementations. This is expected since even small differences in the search results for the two implementations would result in different document frequency values for these terms. As an example of our comparison, we show below, the results from the host 'diabetes.org' (with specificity threshold of 0.6 and coverage threshold of 100) for a randomly chosen set of coherent strings. For all test cases, we observed near perfect agreement for coherent terms in our results and the reference results.
+In order to check the correctness of the results, we used the document frequency values in the reference results for each test case and checked for concordance with the results from our implementation. The results were not identical and the reference results showed a larger number of terms (due to incoherent strings)  as we expected, since our implementation only considers HTML files in the summarization step and ignore PDF, PPT and other non-text formats. For most of the coherent text strings, we found an exact agreement between the document frequency values in the reference results and our results. For some high term-frequency terms such as 'a', 'if' and 'the', we found a slight disagreement (+/- 5) between the document frequencies for these terms in the two implementations. This is expected since even small differences in the search results for the two implementations would result in different document frequency values for these terms. As an example of our comparison, we show below, the results from the host '***diabetes.org***' (with specificity threshold of 0.6 and coverage threshold of 100) for a randomly chosen set of coherent strings. For all test cases, we observed near perfect agreement for coherent terms in our results and the reference results.
 
 
 | Term  |  Ours  |  Reference       | 
