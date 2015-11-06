@@ -104,11 +104,47 @@ The query probling and sampling processes are done side by side in **QProberClas
 
 ## Benchmark Test 
 ######Against Reference Implementation
+In order to check the correctness of the results, we used the document frequency values in the reference results for each test case and checked for concordance with the results from our implementation. The results were not identical and the reference results showed a larger number of terms (due to incoherent strings)  as we expected, since our implementation only considers HTML files int he summarization step and ignore PDF, PPT and other non-text formats. For most of the coherent text strings, we found an exact agreement between the document frequency values in the reference results and our results. For some high term-frequency terms such as 'a', 'if' and 'the', we found a slight disagreement (+/- 5) between the document frequencies for these terms in the two implementations. This is expected since even small differences in the search results for the two implementations would result in different document frequency values for these terms. As an example of our comparison, we show below, the results from the host 'diabetes.org' (with specificity threshold of 0.6 and coverage threshold of 100) for a randomly chosen set of coherent strings. For all test cases, we observed near perfect agreement for coherent terms in our results and the reference results.
 
 
-<pre><code>Code segments</code></pre>
+| Term  |  Ours  |  Reference       | 
+|-------|--------|------------------| 
+| alexandria  |    87    |  87      | 
+| rights | 85   |   85               | 
+| if    |  78 |     81                | 
+| and   |  65    |  65                | 
+| difference  |    59   |   60        | 
+| advocacy     |   54   |   55        | 
+| different     |  22 |     20        | 
+| contributor  |   21  |    20        | 
+| pancreas     |   14   |   13        | 
+| difficult     |  7     |  8         | 
+| differences |    5 |      5         | 
+| substantial  |   4  |     4         | 
+| quantities   |   3   |    3         | 
+| antiplatelet  |  3    |   3         | 
+| substantially  | 2 |      2         | 
+| antihypertensive  |     2    |   2 | 
+| anticipated  |   2   |    2         | 
+| santiago      |  1 |      1         | 
+| quantitative  |  1  |     1         | 
+| quantified    |  1   |    1         | 
+| atlantic      |  1     |  1         | 
+| antisense     |  1    |   1         | 
+| antioxidant    | 1   |    1         | 
+| antihystamines | 1    |   1         | 
+| antihyperglycemic 1    |  1    |   1 | 
+| antidiabetic  |  1    |   1         | 
+| anticoagulants | 1    |   1         | 
+| anticoagulant  | 1    |   1         | 
+| anticipatory   | 1    |   1         | 
+| anticipate    |  1    |   1         | 
+| antibodies    |  1    |   1         | 
+| antianginal   |  1    |   1         | 
+| acetylcysteine | 1    |   1         | 
 
 
 
-## Reference
+
+## References
 1. Ipeirotis, Panagiotis, and Luis Gravano. "QProber: A system for automatic classification of hidden-web databases." (2003).

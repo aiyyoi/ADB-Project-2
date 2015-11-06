@@ -1,4 +1,3 @@
-from HashListClass import *
 from RulesReaderClass import *
 import urllib2
 import urllib
@@ -58,6 +57,7 @@ class DocumentSummary:
 	
 	def getDocumentText(self,url_list):
 		docs = []
+		doc_dump = ''
 		for u in url_list:
 			if(u in self.urlHash or u.split('.')[-1] == "pdf" or u.split('.')[-1] == "ppt"):
 				continue
